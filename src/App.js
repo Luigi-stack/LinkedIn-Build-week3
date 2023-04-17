@@ -4,7 +4,6 @@ import store from './Redux/Store/store';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ProfileJumbotron from './Components/ProfileJumbotron';
 
-
 function App() {
   return (
     <Provider store={store}>
