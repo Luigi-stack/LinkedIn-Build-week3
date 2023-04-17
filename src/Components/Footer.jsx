@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 
 
  const Footer = () => {
@@ -19,98 +19,98 @@ import { Link } from "react-router-dom";
           <Row>
             <Col>
               <div className="d-flex flex-column">
-                <Link className="collegamenti" to={"https://about.linkedin.com/it-it"}>
+                <a className="collegamenti" to={"https://about.linkedin.com/it-it"}>
                   Informazioni
-                </Link>
-                <Link
+                </a>
+                <a
                   className="collegamenti"
                   to={
                     "https://it.linkedin.com/legal/professional-community-policies?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B3a9FOjJ0SruxU5CEqVrPEQ%3D%3D"
                   }
                 >
                   Linee guida della community
-                </Link>
-                <Link className="collegamenti">Privacy e condizioni</Link>
-                <Link
+                </a>
+                <a className="collegamenti">Privacy e condizioni</a>
+                <a
                   to={
                     "https://business.linkedin.com/sales-solutions?trk=flagship_nav&veh=li-footer-lss-control&src=li-footer"
                   }
                   className="collegamenti"
                 >
                   Sales Solutions
-                </Link>
-                <Link to={"https://safety.linkedin.com/"} className="collegamenti">
+                </a>
+                <a to={"https://safety.linkedin.com/"} className="collegamenti">
                   Centro sicurezza
-                </Link>
+                </a>
               </div>
             </Col>
             <Col>
               <div className="d-flex flex-column">
-                <Link
+                <a
                   to={
                     "https://it.linkedin.com/accessibility?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bru6up1A6Seq3bJvMtE7iUQ%3D%3D"
                   }
                   className="collegamenti"
                 >
                   Accessibilità
-                </Link>
-                <Link to={"https://careers.linkedin.com/"} className="collegamenti">
+                </a>
+                <a to={"https://careers.linkedin.com/"} className="collegamenti">
                   Carriera
-                </Link>
-                <Link to={"https://mobile.linkedin.com/it-it"} className="collegamenti">
+                </a>
+                <a to={"https://mobile.linkedin.com/it-it"} className="collegamenti">
                   Opzioni di annuncio
-                </Link>
-                <Link to={"https://mobile.linkedin.com/it-it"} className="collegamenti">
+                </a>
+                <a to={"https://mobile.linkedin.com/it-it"} className="collegamenti">
                   Mobile
-                </Link>
+                </a>
               </div>
             </Col>
             <Col>
               <div className="d-flex flex-column">
-                <Link
+                <a
                   to={
                     "https://business.linkedin.com/it-it/talent-solutions?trk=flagship_nav&veh=li-footer-lts-control-it-it&src=li-footer"
                   }
                   className="collegamenti"
                 >
                   Talent Solutions
-                </Link>
-                <Link
+                </a>
+                <a
                   to={"https://business.linkedin.com/it-it/marketing-solutions?trk=n_nav_lms_f&src=li-footer"}
                   className="collegamenti"
                 >
                   Soluzioni di marketing
-                </Link>
-                <Link
+                </a>
+                <a
                   to={"https://business.linkedin.com/it-it/marketing-solutions/ads?trk=n_nav_ads_f"}
                   className="collegamenti"
                 >
                   Pubbilictà
-                </Link>
-                <Link to={"https://business.linkedin.com/grow?&src=li-footer"} className="collegamenti">
+                </a>
+                <a to={"https://business.linkedin.com/grow?&src=li-footer"} className="collegamenti">
                   Piccole imprese
-                </Link>
+                </a>
               </div>
             </Col>
             <Col>
               <div>
-                <Link
+                <a
                   to={
                     "https://www.linkedin.com/help/linkedin?trk=d_flagship3_profile_view_base&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3Bru6up1A6Seq3bJvMtE7iUQ%3D%3D"
                   }
                   className="collegamenti domande"
                 >
                   Domande?
-                </Link>
+                </a>
                 <p className="footerQuestion">Visita il nostro Centro assistenza</p>
               </div>
               <div>
-                <Link
+                <a
                   to={"https://www.linkedin.com/mypreferences/d/categories/account"}
                   className="collegamenti domande"
                 >
                   Gestisci il tuo account e la tua privacy
-                </Link>
+                </a>
                 <p className="footerQuestion">Vai alle impostazioni</p>
               </div>
             </Col>
