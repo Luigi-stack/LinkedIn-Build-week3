@@ -31,7 +31,7 @@ export const getUser=(autentication)=>{
             const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/me",{
                 method: 'GET',
                 headers:{
-                    'Authorization':autentication
+                    'Authorization':"Bearer "+autentication
                 }
             })
                 if(res.ok){
