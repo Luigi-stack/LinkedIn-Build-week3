@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux';
 import './App.css';
 import store from './Redux/Store/store';
+import 'bootstrap/dist/css/bootstrap_min.css'
 
 function App() {
   return (
