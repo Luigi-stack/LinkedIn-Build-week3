@@ -45,4 +45,49 @@
     transform: rotate(360deg);
   }
 }
+.subIcon{
+  font-size: 0.7em;
+}
+.icons{
+  font-size: 1.2em;
+}
+.iteration{
+border-right: 0.1px solid grey;
+}
+.searchBar{
+  align-items: center;
+}
+nav{
+  border-top:0.1px solid grey ;
+  border-bottom:0.1px solid grey ;
+  color: grey;
+  background-color: #1D2226;
+}
+.inputBar{
+  border-radius: 8px;
+  color: white;
+  align-items: center;
+  background-color: #38434F;
+}
+input{
+  color: white;
+  background-color: #38434F;
+  border: none;
+  outline: none;
+}
+.navRow{
+align-items:center ;
+justify-content: space-between
+
+}
+nav .btn-primary{
+  background-color: transparent!important;
+  padding: 0 !important;
+  border: none!important;
+  color: grey!important;
+}
+.btnIcon:hover{
+color: white!important;
+cursor: pointer;
+}
 
