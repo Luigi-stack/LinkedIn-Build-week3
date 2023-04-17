@@ -12,8 +12,9 @@ const ProfileJumbotron = () => {
                     <Card style={{ width: 'auto' }}>
                         <Card.Img variant="top" src="https://marketplace.canva.com/EAENvpM8lg0/1/0/1600w/canva-clean-work-place-linkedin-banner-ENugiXwwVkE.jpg" />
                         <Card.Body>
-                            <div>
-                                <img className='profilePicture mb-4' src='https://placekitten.com/300/300' alt='profile picture'/>
+                            <div className='d-flex justify-content-between'>
+                                <img className='profilePicture mb-4' src='https://placekitten.com/300/300' alt='profile'/>
+                                <BsBell className='fs-5'/>
                             </div>
                             <div className='d-flex'>
                                 <div className='mb-3'>
