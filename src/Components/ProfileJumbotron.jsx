@@ -31,7 +31,7 @@ const ProfileJumbotron = () => {
                                         </p>
                                     </Card.Text>
                                 </div>
-                                <div className='me-5 mt-2'>
+                                <div className='mx-3 mt-2'>
                                     <p className='mb-1'>
                                         <img src="https://media.licdn.com/dms/image/C4D0BAQEFWO_s8a0FHQ/company-logo_100_100/0/1647618816994?e=1689811200&v=beta&t=wwmMmmlrJ5dTdg2Fv620Knivwh1Ec0kG8JplzelDQM0" alt="logo epicode" style={{ width: '25px' }} /> <a className='fw-bold text-decoration-none' href="https://it.linkedin.com/school/epicodeitalia/">EPICODE</a>
                                     </p>
