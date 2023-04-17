@@ -9,7 +9,7 @@ const ProfileJumbotron = () => {
         <Container className='mt-2'>
             <Row>
                 <Col sm={12} lg={8} className='mb-2'>
-                    <Card style={{ width: 'auto' }}>
+                    <Card style={{ width: 'auto' }}>  {/* className='text-white bg-dark' */}
                         <Card.Img variant="top" src="https://images.ctfassets.net/7thvzrs93dvf/wpImage18643/2f45c72db7876d2f40623a8b09a88b17/linkedin-default-background-cover-photo-1.png?w=790&h=196&q=90&fm=png" />
                         <Card.Body>
                             <div className='d-flex justify-content-between'>
