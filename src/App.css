@@ -67,6 +67,8 @@ nav .btn-primary{
 .btnIcon:hover{
 color: white!important;
 cursor: pointer;
+}
+
 .position-sticky-bottom {
   bottom:0;
   right:0;
