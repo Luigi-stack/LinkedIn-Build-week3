@@ -1,3 +1,4 @@
+/* Jumbotron */
 .profilePicture {
   height: 135px;
   width: 135px;
@@ -19,8 +20,29 @@
 .altroButton, .messaggioButton {
   font-weight: bold !important;
 }
+/* fine Jumbotron */
 
-.altroButton:hover {
-  background-color: rgb(216, 216, 216) !important;
-  color: black !important;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
