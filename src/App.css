@@ -27,7 +27,11 @@
 .App-link {
   color: #61dafb;
 }
-
+.position-sticky-bottom {
+  bottom:0;
+  right:0;
+  position:fixed !important;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
