@@ -62,7 +62,7 @@ export const getExperienceALL=(autentication,idUser)=>{
                 if(res.ok){
 
                 const data=await res.json()
-                dispatch(login(data))
+                dispatch(experience(data))
                 console.log(getState())
                 }else{
 
@@ -92,7 +92,7 @@ export const getExperience=(autentication,idUser,idExp)=>{
                 if(res.ok){
 
                 const data=await res.json()
-                dispatch(login(data))
+                dispatch(experience(data))
                 console.log(getState())
                 }else{
 
