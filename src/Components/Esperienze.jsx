@@ -8,11 +8,11 @@ import { getExperienceALL } from "../Redux/Actions/action_profile";
 const Esperienze = () => {
 
     const dispatch = useDispatch();
-    const user = useSelector((state)=>state.user.login._id)
+    const user = useSelector((state) => state.user.login._id)
     const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOGUzY2ZjYTEyOTAwMTQ0MGMwNjkiLCJpYXQiOjE2ODE4MjQzNTIsImV4cCI6MTY4MzAzMzk1Mn0.fSCCLYfTj3NHDK_nJlNQUgJ8rkMrVR5n7TZRL-Cmy3Y'
     console.log(user)
     useEffect(() => {
-    dispatch(getExperienceALL(key, user))
+        dispatch(getExperienceALL(key, user))
     }, [user]);
 
     return (
@@ -20,10 +20,9 @@ const Esperienze = () => {
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
                 Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-secondary' /><BiPencil className='biPencil p-2 fs-1 text-secondary' /></span>
             </Card.Body>
-            {/* {
-                user?.map((ev)=>{
-                    return (
-                        <Card.Body>
+            {/* {user?.map((ev) => (
+                <>
+                    <Card.Body>
                         <div className="d-flex">
                             <div className="flex-shrink-0">
                                 <img src="https://media.licdn.com/dms/image/C4E0BAQHYgix-Ynux1A/company-logo_100_100/0/1646830188434?e=1689811200&v=beta&t=oArOJOYE7ZD473jCAUzajl3JIXLkxiTvDx61tGEjeAk" alt="" style={{ width: '60px', height: '60px' }} />
@@ -36,8 +35,10 @@ const Esperienze = () => {
                             </div>
                         </div>
                     </Card.Body>
-                    )
-                })
+
+                    <hr className="m-0 mx-3" />
+                </>
+            ))
             } */}
             <Card.Body>
                 <div className="d-flex">
