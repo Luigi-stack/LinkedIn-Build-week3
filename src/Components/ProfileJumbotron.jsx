@@ -6,9 +6,22 @@ import { RiSendPlaneFill } from 'react-icons/ri'
 import SideBar from './SideBar';
 import PersoneCheConosci from './PersoneCheConosci'
 import Informazioni from './Informazioni';
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { getUserMe } from '../Redux/Actions/action_profile';
 
 const ProfileJumbotron = () => {
     
+
+    const dispatch = useDispatch();
+    const user = useSelector((state)=>state.user.login) 
+    const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs'
+    console.log(user.image)
+    useEffect(() => {
+    dispatch(getUserMe(key))
+    }, []);
+
     return (
         <Container className='mt-2'>
             <Row>
@@ -17,18 +30,18 @@ const ProfileJumbotron = () => {
                         <Card.Img variant="top" src="https://images.ctfassets.net/7thvzrs93dvf/wpImage18643/2f45c72db7876d2f40623a8b09a88b17/linkedin-default-background-cover-photo-1.png?w=790&h=196&q=90&fm=png" />
                         <Card.Body>
                             <div className='d-flex justify-content-between'>
-                                <img className='profilePicture ms-3 mb-3' src='https://placekitten.com/300/300' alt='profile' />
+                                <img className='profilePicture ms-3 mb-3' src={user.image} alt='profile' />
                                 <BiPencil className='biPencil p-1 fs-3' />
                             </div>
                             <div className='d-flex justify-content-between ms-1 mb-2'>
                                 <div>
-                                    <Card.Title className='fw-bold m-0'>Gatto Silvestro</Card.Title>
+                                    <Card.Title className='fw-bold m-0'>{user.name}{user.surname}</Card.Title>
                                     <Card.Text>
                                         <p className='m-0'>
-                                        💻 Full-stack developer <a className='text-primary fw-bold text-decoration-none' href="https://it.linkedin.com/school/epicodeitalia/">@Epicode</a>
+                                        💻 {user.title} <a className='text-primary fw-bold text-decoration-none' href="https://it.linkedin.com/school/epicodeitalia/">@Epicode</a>
                                         </p>
                                         <p className='text-secondary m-0'>
-                                            Roma - Italia <span>&#8226;</span> <span className='text-primary fw-bold'>informazioni di contatto</span>
+                                            {user.area} <span>&#8226;</span> <span className='text-primary fw-bold'>{user.email}</span>
                                         </p>
                                         <p className='text-secondary m-0'>
                                             <span className='fw-semibold'>397</span> collegamenti
