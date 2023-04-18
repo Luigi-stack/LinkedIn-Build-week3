@@ -1,7 +1,8 @@
 import { Card } from "react-bootstrap"
 import { BiPencil } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai'
-
+import { Connect } from "react-redux";
+import { getExperienceALL } from "../Redux/Actions/action_profile";
 
 const Esperienze = () => {
     return (
