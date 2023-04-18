@@ -83,3 +83,26 @@ cursor: pointer;
   }
 }
 
+/*Footer bottom*/
+
+.collegamenti {
+  color: #848482;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 8px;
+}
+
+.domande {
+  font-size: 1em;
+}
+
+.footerQuestion {
+  font-size: 0.8em;
+  color: #848482;
+}
+
+#language {
+  width: 100%;
+  border-radius: 6px;
+}
