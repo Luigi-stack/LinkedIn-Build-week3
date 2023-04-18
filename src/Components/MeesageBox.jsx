@@ -15,18 +15,21 @@ function MessageBox() {
             
 
                 <SplitButton
-                    className= "dropdown-menu-right position-sticky-bottom"
+                    className= "dropdown-menu-right position-sticky-bottom bg-white"
                     drop="up-down-center"
-                    variant="secondary"
+                    variant="white"
                     align="start"
                     title={
                         <>
-
-                            messaggistica
-                            <Button>
-                                <Icon.BsPencil className="me-2" />
+                            <Image src="path_to_image" roundedCircle />
+                            Messaggistica
+                            
+                            <Icon2.HiEllipsisHorizontal className="me-2 ms-auto" />
+                            <Button className="bg-white border-0 ms-auto">
+                                <Icon.BsPencil className="me-2 bg-white text-secondary" />
                             </Button>
-                            <Icon2.HiEllipsisHorizontal className="me-2" />
+                            
+                            
 
                         </>
                     }
