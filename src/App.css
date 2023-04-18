@@ -23,7 +23,6 @@
 /* fine Jumbotron */
 
 /* INIZIO NAVBAR */
-
 .subIcon{
   font-size: 0.7em;
 }
@@ -37,6 +36,9 @@ border-right: 0.1px solid grey;
   align-items: center;
 }
 nav{
+  z-index: 1;
+  position: sticky;
+  top: 0;
   border-top:0.1px solid grey ;
   border-bottom:0.1px solid grey ;
   color: grey;
@@ -91,3 +93,29 @@ border-bottom: 1px solid white;
   }
 }
 
+.dropdown-menu-right.position-sticky-bottom {
+  background-color: white !important;
+  }
+/*Footer bottom*/
+
+.collegamenti {
+  color: #848482;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 8px;
+}
+
+.domande {
+  font-size: 1em;
+}
+
+.footerQuestion {
+  font-size: 0.8em;
+  color: #848482;
+}
+
+#language {
+  width: 100%;
+  border-radius: 6px;
+}
