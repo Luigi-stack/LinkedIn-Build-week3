@@ -1,10 +1,20 @@
 import { Card } from "react-bootstrap"
 import { BiPencil } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai'
-import { Connect } from "react-redux";
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { getExperienceALL } from "../Redux/Actions/action_profile";
 
 const Esperienze = () => {
+
+    // const dispatch = useDispatch();
+    // const user = useSelector((state)=>state.user.login._id)
+    // const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOGUzY2ZjYTEyOTAwMTQ0MGMwNjkiLCJpYXQiOjE2ODE4MjQzNTIsImV4cCI6MTY4MzAzMzk1Mn0.fSCCLYfTj3NHDK_nJlNQUgJ8rkMrVR5n7TZRL-Cmy3Y'
+    // console.log(user)
+    // useEffect(() => {
+    // dispatch(getExperienceALL())
+    // }, []);
+
     return (
         <Card className="mt-3">
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
