@@ -1,9 +1,10 @@
-import { ADD_PASSWORD, ADD_USER } from "../Actions/action_profile"
+import { ADD_PASSWORD, ADD_USER, LOGIN } from "../Actions/action_profile"
 
 const initialState = {
     user: {
         user: '',
-        password: ''
+        password: '',
+        login:[]
     }
 }
 
@@ -26,6 +27,17 @@ const mainProfile = (state = initialState, action) => {
                     password: action.payload
                 }
                 }
+
+                case LOGIN:
+                    return{
+                          ...state,
+                          user:{
+                            ...state.user,
+                            login:action.payload
+                          }  
+
+                    }
+
 
         default: return state
     }
