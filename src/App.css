@@ -36,6 +36,7 @@ border-right: 0.1px solid grey;
   align-items: center;
 }
 nav{
+  z-index: 1;
   position: sticky;
   top: 0;
   border-top:0.1px solid grey ;
