@@ -15,7 +15,7 @@ const ProfileJumbotron = () => {
 
     const dispatch = useDispatch();
     const user = useSelector((state)=>state.user.login) 
-    const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs'
+    const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlYTNlMmZjYTEyOTAwMTQ0MGMwYTciLCJpYXQiOjE2ODE4MjY3ODYsImV4cCI6MTY4MzAzNjM4Nn0.B6XNeUSKb3fCDjALI9vzfq9BAgJ1haEHZtipFBgrR5s'
     console.log(user.image)
     useEffect(() => {
     dispatch(getUserMe(key))
@@ -34,7 +34,7 @@ const ProfileJumbotron = () => {
                             </div>
                             <div className='d-flex justify-content-between ms-1 mb-2'>
                                 <div>
-                                    <Card.Title className='fw-bold m-0'>{user.name}{user.surname}</Card.Title>
+                                    <Card.Title className='fw-bold m-0'>{user.name} {user.surname}</Card.Title>
                                     <Card.Text>
                                         <p className='m-0'>
                                         💻 {user.title} <a className='text-primary fw-bold text-decoration-none' href="https://it.linkedin.com/school/epicodeitalia/">@Epicode</a>
