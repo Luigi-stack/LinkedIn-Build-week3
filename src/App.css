@@ -1,33 +1,79 @@
-.App {
-  text-align: center;
+/* Jumbotron */
+.profilePicture {
+  height: 135px;
+  width: 135px;
+  border-radius: 50%;
+  left: 4px;
+  position: relative;
+  top: 5px;
+  background-color: white;
+  padding: 5px;
+  margin-top: -100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.biPencil:hover {
+  background-color: rgb(216, 216, 216);
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.altroButton, .messaggioButton {
+  font-weight: bold !important;
 }
+/* fine Jumbotron */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+
+.subIcon{
+  font-size: 0.7em;
+}
+.icons{
+  font-size: 1.2em;
+}
+.iteration{
+border-right: 0.1px solid grey;
+}
+.searchBar{
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+nav{
+  border-top:0.1px solid grey ;
+  border-bottom:0.1px solid grey ;
+  color: grey;
+  background-color: #1D2226;
+}
+.inputBar{
+  border-radius: 8px;
   color: white;
+  align-items: center;
+  background-color: #38434F;
+}
+input{
+  color: white;
+  background-color: #38434F;
+  border: none;
+  outline: none;
+}
+.navRow{
+align-items:center ;
+justify-content: space-between
+
+}
+nav .btn-primary{
+  background-color: transparent!important;
+  padding: 0 !important;
+  border: none!important;
+  color: grey!important;
+}
+.btnIcon:hover{
+color: white!important;
+cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.position-sticky-bottom {
+  bottom:0;
+  right:0;
+  position:fixed !important;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,3 +83,29 @@
   }
 }
 
+.dropdown-menu-right.position-sticky-bottom {
+  background-color: white !important;
+  }
+/*Footer bottom*/
+
+.collegamenti {
+  color: #848482;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-bottom: 8px;
+}
+
+.domande {
+  font-size: 1em;
+}
+
+.footerQuestion {
+  font-size: 0.8em;
+  color: #848482;
+}
+
+#language {
+  width: 100%;
+  border-radius: 6px;
+}
