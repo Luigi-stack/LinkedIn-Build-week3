@@ -5,12 +5,17 @@ import Footer from './Components/Footer';
 import MyNav from './Components/MyNav';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ProfileJumbotron from './Components/ProfileJumbotron';
+import Prova from './Components/Prova';
+
 import MessageBox from './Components/MeesageBox';
 
 function App() {
   return (
     <Provider store={store}>
     <div className="App">
+
+    <ProfileJumbotron/>
+    <Prova />
   
      <MyNav/>
      <ProfileJumbotron/>
