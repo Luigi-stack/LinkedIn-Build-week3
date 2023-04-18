@@ -30,7 +30,7 @@
   font-size: 1.2em;
 }
 .iteration{
-border-right: 0.1px solid grey;
+border-right: 0.1px solid rgba(128, 128, 128, 0.2);
 }
 .searchBar{
   align-items: center;
@@ -39,8 +39,8 @@ nav{
   z-index: 1;
   position: sticky;
   top: 0;
-  border-top:0.1px solid grey ;
-  border-bottom:0.1px solid grey ;
+  border-top:0.1px solid rgba(128, 128, 128, 0.2) ;
+  border-bottom:0.1px solid rgba(128, 128, 128, 0.2) ;
   color: grey;
   background-color: #1D2226;
 }
