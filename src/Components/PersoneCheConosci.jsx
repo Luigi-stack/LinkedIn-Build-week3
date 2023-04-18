@@ -33,7 +33,7 @@ const PersoneCheConosci = () => {
                                 <>
                                     <Card.Body>
                                         <div className="d-flex align-item-center">
-                                            <img src={allProfile[i].image} alt="" style={{ width: '50px', height: '50px' }} />
+                                            <img src={allProfile[i].image} alt="" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                                             <p className="ms-3">{allProfile[i].name} {allProfile[i].surname}<br /> <span className="fw-lighter">{allProfile[i].title}<br />{allProfile[i].area}</span> </p>
                                         </div>
                                         <Button variant="outline-secondary" size="sm" className='altroButton rounded-pill px-3'><BsFillPersonPlusFill /> Collegati</Button>
