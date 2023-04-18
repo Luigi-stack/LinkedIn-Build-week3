@@ -37,7 +37,7 @@ const ProfileJumbotron = () => {
                             
                             <div className='d-flex justify-content-between ms-1 mb-2'>
                                 <div>
-                                    <Card.Title className='fw-bold m-0'>{user.name}{user.surname}</Card.Title>
+                                    <Card.Title className='fw-bold m-0'>{user.name} {user.surname}</Card.Title>
                                     <Card.Text>
                                         <p className='m-0'>
                                             💻 {user.title} <a className='text-primary fw-bold text-decoration-none' href="https://it.linkedin.com/school/epicodeitalia/">@Epicode</a>
