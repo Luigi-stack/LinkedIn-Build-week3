@@ -83,6 +83,9 @@ cursor: pointer;
   }
 }
 
+.dropdown-menu-right.position-sticky-bottom {
+  background-color: white !important;
+  }
 /*Footer bottom*/
 
 .collegamenti {
