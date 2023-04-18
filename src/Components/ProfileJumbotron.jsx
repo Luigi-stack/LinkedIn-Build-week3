@@ -6,6 +6,7 @@ import { RiSendPlaneFill } from 'react-icons/ri'
 import SideBar from './SideBar';
 import PersoneCheConosci from './PersoneCheConosci'
 import Informazioni from './Informazioni';
+import Esperienze from './Esperienze';
 
 const ProfileJumbotron = () => {
     return (
@@ -17,7 +18,7 @@ const ProfileJumbotron = () => {
                         <Card.Body>
                             <div className='d-flex justify-content-between'>
                                 <img className='profilePicture ms-3 mb-3' src='https://placekitten.com/300/300' alt='profile' />
-                                <BiPencil className='biPencil p-1 fs-3' />
+                                <BiPencil className='biPencil p-2 fs-1 text-secondary' />
                             </div>
                             <div className='d-flex justify-content-between ms-1 mb-2'>
                                 <div>
@@ -48,6 +49,7 @@ const ProfileJumbotron = () => {
                         </Card.Body>
                     </Card>
                     <Informazioni/>
+                    <Esperienze/>
                 </Col>
 
                 <Col sm={12} lg={4} className=''>

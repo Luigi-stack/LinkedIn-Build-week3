@@ -1,13 +1,11 @@
 import { Provider } from 'react-redux';
 import './App.css';
 import store from './Redux/Store/store';
-import Footer from './Components/Footer';
 import MyNav from './Components/MyNav';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ProfileJumbotron from './Components/ProfileJumbotron';
-import Prova from './Components/Prova';
-
 import MessageBox from './Components/MeesageBox';
+import MyFooter from './Components/MyFooter';
 
 function App() {
   return (
@@ -16,7 +14,7 @@ function App() {
      <MyNav/>
      <ProfileJumbotron/>
      <MessageBox/>
-      <Footer />
+      <MyFooter />
     </div>
     </Provider>
 )
