@@ -12,7 +12,8 @@ const PersoneCheConosci = () => {
     useEffect(() => {
         dispatch(getUserALL(AUTH))
     }, [])
-let count =0
+    let count = 0
+    let count2 = 0
     return (
         <>
             <Card className="fw-bold mt-3">
@@ -22,19 +23,23 @@ let count =0
                 {
                     allProfile?.map((i) => {
                         count++
-                        i=Math.floor(Math.random() * allProfile.length)
-                        if (count <5) {
-                            return(
+                        count2++
+                        if (count < 5) {
+                            i = Math.floor(Math.random() * allProfile.length)
+                            console.log(i)
+                        }
+                        if (count2 < 5) {
+                            return (
                                 <>
-                                <Card.Body>
-                                    <div className="d-flex align-item-center">
-                                        <img src={allProfile[i].image} alt="" style={{ width: '50px', height: '50px' }} />
-                                        <p className="ms-3">{allProfile[i].name} {allProfile[i].surname}<br /> <span className="fw-lighter">{allProfile[i].title}<br/>{allProfile[i].area}</span> </p>
-                                    </div>
-                                    <Button variant="outline-secondary" size="sm" className='altroButton rounded-pill px-3'><BsFillPersonPlusFill /> Collegati</Button>
-                                </Card.Body>
-                                <hr className="m-0 mx-3" />
-                            </>
+                                    <Card.Body>
+                                        <div className="d-flex align-item-center">
+                                            <img src={allProfile[i].image} alt="" style={{ width: '50px', height: '50px' }} />
+                                            <p className="ms-3">{allProfile[i].name} {allProfile[i].surname}<br /> <span className="fw-lighter">{allProfile[i].title}<br />{allProfile[i].area}</span> </p>
+                                        </div>
+                                        <Button variant="outline-secondary" size="sm" className='altroButton rounded-pill px-3'><BsFillPersonPlusFill /> Collegati</Button>
+                                    </Card.Body>
+                                    <hr className="m-0 mx-3" />
+                                </>
                             )
                         }
                     })
