@@ -1,4 +1,3 @@
-import { async } from "q";
 
 export const ADD_USER = 'ADD_USER';
 export const ADD_PASSWORD = 'ADD_PASSWORD';
@@ -48,13 +47,13 @@ export const experience= (experience)=> ({
 
 
 
-export const getExperienceALL=(autentication,idUser, experience)=>{
+export const getExperienceALL=(autentication,idUser)=>{
 
     return async (dispatch,getState)=>{
 
         try {
 
-            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/"+experience,{
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences",{
                 method: 'GET',
                 headers:{
                     'Authorization':"Bearer "+autentication
@@ -78,13 +77,13 @@ export const getExperienceALL=(autentication,idUser, experience)=>{
     }
 
 }
-export const getExperience=(autentication,idUser, experience,idExp)=>{
+export const getExperience=(autentication,idUser,idExp)=>{
 
     return async (dispatch,getState)=>{
 
         try {
 
-            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/"+experience+"/"+idExp,{
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences/"+idExp,{
                 method: 'GET',
                 headers:{
                     'Authorization':"Bearer "+autentication
@@ -108,13 +107,13 @@ export const getExperience=(autentication,idUser, experience,idExp)=>{
     }
 
 }
-export const delExperience=(autentication,idUser, experience,idExp)=>{
+export const delExperience=(autentication,idUser,idExp)=>{
 
     return async (dispatch,getState)=>{
 
         try {
 
-            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/"+experience+"/"+idExp,{
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+/experiences/+idExp,{
                 method: 'DELETTE',
                 headers:{
                     'Authorization':"Bearer "+autentication
@@ -136,13 +135,13 @@ export const delExperience=(autentication,idUser, experience,idExp)=>{
     }
 
 }
-export const addExperience=(autentication,idUser, experience,bodyCode)=>{
+export const addExperience=(autentication,idUser,bodyCode)=>{
 
     return async (dispatch,getState)=>{
 
         try {
 
-            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/"+experience,{
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+/experiences/,{
                 method: 'POST',
                 body:bodyCode,
                 headers:{

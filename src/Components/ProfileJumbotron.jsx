@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUserMe } from '../Redux/Actions/action_profile';
 
 const ProfileJumbotron = () => {
+    
 
     const dispatch = useDispatch();
     const user = useSelector((state)=>state.user.login) 
