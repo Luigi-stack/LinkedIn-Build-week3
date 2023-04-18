@@ -21,7 +21,7 @@ const Esperienze = () => {
                 Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-secondary' /><BiPencil className='biPencil p-2 fs-1 text-secondary' /></span>
             </Card.Body>
             {/* {
-                getExperienceALL?.map((ev)=>{
+                user?.map((ev)=>{
                     return (
                         <Card.Body>
                         <div className="d-flex">
