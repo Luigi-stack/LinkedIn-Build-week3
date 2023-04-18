@@ -8,6 +8,7 @@ import PersoneCheConosci from './PersoneCheConosci'
 import Informazioni from './Informazioni';
 
 const ProfileJumbotron = () => {
+    
     return (
         <Container className='mt-2'>
             <Row>
