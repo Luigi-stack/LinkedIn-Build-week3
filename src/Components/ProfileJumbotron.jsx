@@ -3,6 +3,9 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { BiPencil } from 'react-icons/bi';
 import { RiSendPlaneFill } from 'react-icons/ri'
+import SideBar from './SideBar';
+import PersoneCheConosci from './PersoneCheConosci'
+import Informazioni from './Informazioni';
 
 const ProfileJumbotron = () => {
     return (
@@ -44,12 +47,13 @@ const ProfileJumbotron = () => {
                             <Button variant="outline-dark" size="sm" className='altroButton rounded-pill px-3 ms-3'>Altro</Button>
                         </Card.Body>
                     </Card>
+                    <Informazioni/>
                 </Col>
 
                 <Col sm={12} lg={4} className=''>
-                    SideBar
+                    <SideBar/>
+                    <PersoneCheConosci/>
                 </Col>
-
             </Row>
 
         </Container>

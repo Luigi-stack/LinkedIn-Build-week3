@@ -92,6 +92,9 @@ border-bottom: 1px solid white;
   }
 }
 
+.dropdown-menu-right.position-sticky-bottom {
+  background-color: white !important;
+  }
 /*Footer bottom*/
 
 .collegamenti {
