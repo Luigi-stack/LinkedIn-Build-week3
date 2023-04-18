@@ -13,10 +13,6 @@ function App() {
   return (
     <Provider store={store}>
     <div className="App">
-
-    <ProfileJumbotron/>
-    <Prova />
-  
      <MyNav/>
      <ProfileJumbotron/>
      <MessageBox/>
