@@ -53,7 +53,7 @@ const MyNav = function () {
                                     <div className="icons"><IoIosNotifications /><Badge bg='danger'></Badge></div>
                                     <div className='subIcon'>Notifica</div>
                                 </div>
-                                <div className='d-flex flex-column mx-3 p-1'>
+                                <div className='btnIcon mx-3 p-1 '>
                                     <div className='icons '><BsFillPeopleFill /><Badge bg='danger'></Badge></div>
                                     <div>
                                         <Dropdown>
@@ -70,10 +70,10 @@ const MyNav = function () {
                                     </div>
                                 </div>
                             </div>
-                            <div className="sideBar mx-5 p-1 d-flex flex-column">
+                            <div className="sideBar mx-5 p-1 btnIcon">
                                 <div className='icons '><RiTableFill /></div>
                                 <div>
-                                    <Dropdown>
+                                    <Dropdown >
                                         <Dropdown.Toggle>
                                             Per le aziende
                                         </Dropdown.Toggle>

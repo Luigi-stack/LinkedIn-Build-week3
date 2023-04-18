@@ -22,6 +22,7 @@
 }
 /* fine Jumbotron */
 
+/* INIZIO NAVBAR */
 
 .subIcon{
   font-size: 0.7em;
@@ -67,7 +68,14 @@ nav .btn-primary{
 .btnIcon:hover{
 color: white!important;
 cursor: pointer;
+border-bottom: 1px solid white;
 }
+.btnIcon{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+/* FINE NAVBAR*/
 
 .position-sticky-bottom {
   bottom:0;
