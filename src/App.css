@@ -23,9 +23,6 @@
 /* fine Jumbotron */
 
 /* INIZIO NAVBAR */
-.subIcon{
-  font-size: 0.7em;
-}
 .icons{
   font-size: 1.2em;
 }
@@ -66,6 +63,9 @@ nav .btn-primary{
   padding: 0 !important;
   border: none!important;
   color: grey!important;
+}
+.subDrop:hover{
+  color: white!important;
 }
 .btnIcon:hover{
 color: white!important;
