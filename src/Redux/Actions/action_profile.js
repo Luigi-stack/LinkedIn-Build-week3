@@ -1,4 +1,3 @@
-import { async } from "q";
 
 export const ADD_USER = 'ADD_USER';
 export const ADD_PASSWORD = 'ADD_PASSWORD';
