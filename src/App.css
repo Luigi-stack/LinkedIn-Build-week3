@@ -23,7 +23,6 @@
 /* fine Jumbotron */
 
 /* INIZIO NAVBAR */
-
 .subIcon{
   font-size: 0.7em;
 }
@@ -37,6 +36,8 @@ border-right: 0.1px solid grey;
   align-items: center;
 }
 nav{
+  position: sticky;
+  top: 0;
   border-top:0.1px solid grey ;
   border-bottom:0.1px solid grey ;
   color: grey;
