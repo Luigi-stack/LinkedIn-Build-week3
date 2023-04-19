@@ -3,10 +3,11 @@ import { BiPencil } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai'
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addExperience, getExperience, getExperienceALL } from "../Redux/Actions/action_profile";
+import { addExperience, delExperience, getExperience, getExperienceALL } from "../Redux/Actions/action_profile";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import * as Icon from "react-icons/md"
 
 const Esperienze = () => {
 
@@ -14,13 +15,13 @@ const Esperienze = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    const [form,setForm]=useState("");
     const[role,setRole]=useState("");
     const[comapny,setCompany]=useState("");
     const[startDate,setStartDate]=useState("");
     const[endDate,setEndDate]=useState("");
     const[description,setDescritpion]=useState("");
     const[area,setArea]=useState("");
+
     let state={
         role:role,
         company:comapny,
@@ -49,8 +50,11 @@ const Esperienze = () => {
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
                 Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-secondary' onClick={handleShow} /><BiPencil className='biPencil p-2 fs-1 text-secondary' /></span>
             </Card.Body>
-            { experince?.map((el) => (
+            { experince?.map((el,i) => (
+
+                
                 <>
+               
                 <Card.Body>
                 <div className="d-flex">
                 <div className="flex-shrink-0">
@@ -59,9 +63,10 @@ const Esperienze = () => {
                 <div className="flex-grow-1 ms-3">
                 <span className="fw-bold">{el.role}</span> <br />
                 <span>{el.company}</span> <br />
-                <span className="text-secondary">inizio:{el.startDate} - fine {el.endDate} </span> <br />
+                <span className="text-secondary">inizio:{el.startDate.split("T",1)} - fine: {el.endDate.split("T",1)} </span> <br />
                 <span className="text-secondary">{el.area}</span>
                             </div>
+                            <Button size="sm" className="border border-0" variant="outline-dark" onClick={()=>{dispatch(delExperience(key,user,el._id))}}><Icon.MdDeleteForever /></Button>
                         </div>
                         </Card.Body>
                         
@@ -129,7 +134,7 @@ const Esperienze = () => {
         e.preventDefault()
         let stringStart=startDate.split("T");
         let stringEnd=endDate.split("T");
-
+        console.log(stringStart)
          state={
             role:role,
             company:comapny,
