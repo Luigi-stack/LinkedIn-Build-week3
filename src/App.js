@@ -6,17 +6,32 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ProfileJumbotron from './Components/ProfileJumbotron';
 import MessageBox from './Components/MeesageBox';
 import MyFooter from './Components/MyFooter';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
+    <BrowserRouter>
     <Provider store={store}>
     <div className="App">
      <MyNav/>
-     <ProfileJumbotron/>
+     <Routes>
+      
+
+<Route path='/' element= {
+  <>
+  <ProfileJumbotron/>
+  <MyFooter />
+  </>
+}
+ />
+
+
+     </Routes>
+
      <MessageBox/>
-      <MyFooter />
     </div>
     </Provider>
+    </BrowserRouter>
 )
 }
 
