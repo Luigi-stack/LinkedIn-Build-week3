@@ -1,4 +1,6 @@
-body, html, .App {
+body,
+html,
+.App {
   background-color: black !important;
 }
 
@@ -21,26 +23,31 @@ body, html, .App {
   cursor: pointer;
 }
 
-.altroButton:hover{
+.altroButton:hover {
   background-color: lightslategray !important;
   color: white !important;
 }
 
-.altroButton, .messaggioButton {
+.altroButton,
+.messaggioButton {
   font-weight: bold !important;
 }
+
 /* fine Jumbotron */
 
 /* INIZIO NAVBAR */
 .icons {
   font-size: 1.2em;
 }
+
 .iteration {
   border-right: 0.1px solid rgba(128, 128, 128, 0.2);
 }
+
 .searchBar {
   align-items: center;
 }
+
 nav {
   z-index: 1;
   position: sticky;
@@ -62,19 +69,23 @@ input {
   border: none;
   outline: none;
 }
+
 .navRow {
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between
 }
+
 nav .btn-primary {
   background-color: transparent !important;
   padding: 0 !important;
   border: none !important;
   color: grey !important;
 }
+
 .subDrop:hover {
   color: white !important;
 }
+
 .btnIcon:hover {
   color: white !important;
   cursor: pointer;
@@ -85,17 +96,31 @@ nav .btn-primary {
   display: flex;
   flex-direction: column;
 }
+
 /* FINE NAVBAR*/
 
+/* messagrBox */
 .position-sticky-bottom {
   bottom: 0;
   right: 0;
   position: fixed !important;
 }
+
+.dropdown-item,
+.dropdown-menu {
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+::placeholder {
+  color: white !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -171,9 +196,8 @@ nav .btn-primary {
 width: 50px;
 }
 /* homepage left part */
-
 .profilePictureHome {
-  height:60px;
+  height: 60px;
   width: 60px;
   border-radius: 50%;
   position: relative;
@@ -182,7 +206,7 @@ width: 50px;
   margin-top: -25px;
 }
 
-.hoverElement:hover{
+.hoverElement:hover {
   background-color: #84848233;
   cursor: pointer;
 }
@@ -190,3 +214,5 @@ width: 50px;
 .textSmall {
   font-size: 12px;
 }
+
+/* fine homepage left part */
