@@ -80,7 +80,7 @@ const Esperienze = () => {
                         : 
                         
                         (<>
-                         <Button size="sm" className="border border-0" variant="outline-dark" onClick={()=>{
+                         <Button size="sm" className="border border-0" variant="outline-light" onClick={()=>{
                             dispatch(delExperience(key,user,el._id));
                             dispatch(getExperienceALL(key, user));
                             }}><Icon.MdDeleteForever /></Button>
