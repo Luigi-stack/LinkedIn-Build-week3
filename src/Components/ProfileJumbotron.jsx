@@ -26,7 +26,7 @@ const ProfileJumbotron = () => {
     return (
         <Container className='mt-2'>
             <Row>
-                <Col sm={12} lg={8} className='mb-2'>
+                <Col sm={12} lg={7} className='mb-2 offset-lg-1'>
                     <Card style={{ width: 'auto' }}>  {/* className='text-white bg-dark' */}
                         <Card.Img variant="top" src="https://images.ctfassets.net/7thvzrs93dvf/wpImage18643/2f45c72db7876d2f40623a8b09a88b17/linkedin-default-background-cover-photo-1.png?w=790&h=196&q=90&fm=png" />
                         <Card.Body>
@@ -67,7 +67,7 @@ const ProfileJumbotron = () => {
                     <Esperienze />
                 </Col>
 
-                <Col sm={12} lg={4} className=''>
+                <Col sm={12} lg={3} className=''>
                     <SideBar />
                     <PersoneCheConosci />
                 </Col>
