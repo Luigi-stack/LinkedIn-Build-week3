@@ -11,11 +11,8 @@ const Informazioni = () => {
 
     const dispatch = useDispatch();
     const user = useSelector((state)=>state.user.login) 
-    const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlYTNlMmZjYTEyOTAwMTQ0MGMwYTciLCJpYXQiOjE2ODE4MjY3ODYsImV4cCI6MTY4MzAzNjM4Nn0.B6XNeUSKb3fCDjALI9vzfq9BAgJ1haEHZtipFBgrR5s'
     console.log(user.image)
-    useEffect(() => {
-    dispatch(getUserMe(key))
-    }, []);
+
     return (
         <Card className="mt-3">
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">

@@ -238,7 +238,7 @@ export const getExperienceALL=(autentication,idUser)=>{
 
         try {
 
-            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences",{
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences/",{
                 method: 'GET',
                 headers:{
                     'Authorization':"Bearer "+autentication
