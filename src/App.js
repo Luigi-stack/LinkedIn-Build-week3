@@ -6,15 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ProfileJumbotron from './Components/ProfileJumbotron';
 import MessageBox from './Components/MeesageBox';
 import MyFooter from './Components/MyFooter';
+import PostBox from './Components/PostBox';
 
 function App() {
   return (
     <Provider store={store}>
     <div className="App">
-     <MyNav/>
-     <ProfileJumbotron/>
-     <MessageBox/>
-      <MyFooter />
+    <PostBox />
     </div>
     </Provider>
 )

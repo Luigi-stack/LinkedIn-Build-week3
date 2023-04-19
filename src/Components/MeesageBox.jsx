@@ -24,8 +24,8 @@ function MessageBox() {
                             <Image src="path_to_image" roundedCircle />
                             Messaggistica
                             
-                            <Icon2.HiEllipsisHorizontal className="me-2 ms-auto" />
-                            <Button className="bg-white border-0 ms-auto">
+                            <Icon2.HiEllipsisHorizontal className="me-2 mx-auto" />
+                            <Button className="bg-white border-0 mx-auto">
                                 <Icon.BsPencil className="me-2 bg-white text-secondary" />
                             </Button>
                             
