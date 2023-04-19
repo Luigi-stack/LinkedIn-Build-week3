@@ -27,7 +27,7 @@ function MessageBox() {
                             <Button className="bg-dark border-0 ms-auto"><Icon2.HiEllipsisHorizontal className="me-2 ms-auto" /></Button>
                             
                             <Button className="bg-dark border-0 ms-auto">
-                                <Icon.BsPencil className="me-2 text-secondary" />
+                                <Icon.BsPencil className="me-2 text-white" />
                             </Button>
                             
                             
