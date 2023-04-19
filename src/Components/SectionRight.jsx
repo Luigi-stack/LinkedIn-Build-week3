@@ -1,52 +1,42 @@
 import { Card } from "react-bootstrap";
 import { BsFillInfoSquareFill } from "react-icons/bs";
+import FooterHomePage from "./FooterHomePage";
 
 
 export const SectionRight = () => {
   return (
     <>
-      <Card className="py-4 px-3 d-none d-md-block">
+      <Card className="pt-3 px-3 mb-4 bg-dark text-white">
         <div className="d-flex justify-content-between align-items-center">
-          <h6 className="fw-bold text-black mb-0">Linkedin Notizie</h6>
-          <BsFillInfoSquareFill style={{ width: "0.7em" }} />
+          <h6 className="fw-bold mb-0">Linkedin Notizie</h6>
+          <BsFillInfoSquareFill className="fs-6 color-secondary" />
         </div>
-        <div className="mt-2">
+        <div className="mt-3">
           <ul className="ps-3">
-            <div>
-              <li className="fw-bold text-dark">Meno lavoro, più aperitivi</li>
-              <p className="mb-2">18 ore fa</p>
-            </div>
-            <div>
-              <li className="fw-bold text-dark">
+              <li className="fw-bold">Meno lavoro, più aperitivi</li>
+              <p className="mb-2 subtitleUl">18 ore fa</p>
+
+              <li className="fw-bold">
                 Ad Antonio mancano i suoi compagni d'avventura
               </li>
-              <p className="mb-2">14 ore fa</p>
-            </div>
-            <div>
-              <li className="fw-bold text-dark">Domani Piove</li>
-              <p className="mb-2">6 ore fa</p>
-            </div>
-            <div>
-              <li className="fw-bold text-dark">
+              <p className="mb-2 subtitleUl">14 ore fa</p>
+
+              <li className="fw-bold">Domani Piove</li>
+              <p className="mb-2 subtitleUl">6 ore fa</p>
+
+              <li className="fw-bold">
                 Cosa cambia se stacchi la testa a qualcuno
               </li>
-              <p className="mb-2">1 ore fa</p>
-            </div>
-            <div>
-              <li className="fw-bold text-dark">E' morto Berlusconi</li>
-              <p className="mb-2">19 ore fa</p>
-            </div>
+              <p className="mb-2 subtitleUl">1 ore fa</p>
+
+              <li className="fw-bold">E' morto Berlusconi</li>
+              <p className="mb-2 subtitleUl">19 ore fa</p>
+
           </ul>
         </div>
       </Card>
-      <Card className="mt-2 d-none d-lg-block">
-        <img
-          style={{ width: "100%", height: "100%" }}
-          src=""
-          alt=""
-        />
-      </Card>
-      {}
+      <FooterHomePage />
+
     </>
   );
 };
