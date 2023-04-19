@@ -8,6 +8,7 @@ import { MdWork } from 'react-icons/md';
 import { IoIosNotifications } from 'react-icons/io';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { RiTableFill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 
 
@@ -33,10 +34,12 @@ const MyNav = function () {
                         </div>
                         <div className='d-flex secondaryNav'>
                             <div className="iteration d-flex">
-                                <div className='btnIcon mx-3 p-1'>
-                                    <div className="icons"><AiFillHome /><Badge bg='danger'></Badge> </div>
-                                    <div>Home</div>
-                                </div>
+                                <Link to='home' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                                    <div className='btnIcon mx-3 p-1'>
+                                        <div className="icons"><AiFillHome /><Badge bg='danger'></Badge> </div>
+                                        <div>Home</div>
+                                    </div>
+                                </Link>
                                 <div className='btnIcon mx-3 p-1'>
                                     <div className="icons"><BsFillPeopleFill /><Badge bg='danger'></Badge></div>
                                     <div>Rete</div>

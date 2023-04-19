@@ -1,16 +1,18 @@
 import { Container, Row, Col } from "react-bootstrap"
+import AllNews from "./AllNews"
+import HomePageLeft from "./HomePageLeft"
 
 
 const HomePage = () => {
     return (
-        <Container>
+        <Container className="mt-2">
             <Row>
-                <Col sm={12} lg={2}>
-                    {/* qui inserisci la parte di sinistra */}
+                <Col sm={12} lg={3} className="offset-lg-1">
+                    <HomePageLeft />
                 </Col>
 
-                <Col sm={12} lg={6}>
-                    {/* qui inserisci la parte centrale */}
+                <Col sm={12} lg={5}>
+                    <AllNews />
                 </Col>
 
                 <Col sm={12} lg={2}>

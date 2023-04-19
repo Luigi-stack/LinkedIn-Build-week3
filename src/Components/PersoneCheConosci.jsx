@@ -16,7 +16,7 @@ const PersoneCheConosci = () => {
     let count2 = 0
     return (
         <>
-            <Card className="fw-bold mt-3">
+            <Card className="text-white bg-dark border-0 fw-bold mt-3">
                 <Card.Body className="pb-0 fs-5">
                     Persone che potresti conoscere
                 </Card.Body>
@@ -36,7 +36,7 @@ const PersoneCheConosci = () => {
                                             <img src={allProfile[i].image} alt="" style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                                             <p className="ms-3">{allProfile[i].name} {allProfile[i].surname}<br /> <span className="fw-lighter">{allProfile[i].title}<br />{allProfile[i].area}</span> </p>
                                         </div>
-                                        <Button variant="outline-secondary" size="sm" className='altroButton rounded-pill px-3'><BsFillPersonPlusFill /> Collegati</Button>
+                                        <Button variant="outline-light" size="sm" className='altroButton rounded-pill px-3'><BsFillPersonPlusFill /> Collegati</Button>
                                     </Card.Body>
                                     <hr className="m-0 mx-3" />
                                 </>
