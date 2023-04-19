@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap"
-import { SectionRight } from "./SectionRight"
 import AllNews from "./AllNews"
 import HomePageLeft from "./HomePageLeft"
 import PostBox from "./PostBox"
@@ -19,7 +18,7 @@ const HomePage = () => {
                 </Col>
 
                 <Col sm={12} lg={2}>
-                    <SectionRight />
+                    {/* qui inserisci la parte di destra */}
                 </Col>
             </Row>
         </Container>
