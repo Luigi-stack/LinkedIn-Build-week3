@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap"
+import { SectionRight } from "./SectionRight"
 
 
 const HomePage = () => {
@@ -15,7 +16,7 @@ const HomePage = () => {
                 </Col>
 
                 <Col sm={12} lg={2}>
-                    {/* qui inserisci la parte di destra */}
+                    <SectionRight />
                 </Col>
             </Row>
         </Container>

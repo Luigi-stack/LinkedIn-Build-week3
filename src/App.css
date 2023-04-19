@@ -119,3 +119,14 @@ border-bottom: 1px solid white;
   width: 100%;
   border-radius: 6px;
 }
+
+/*SectionRight*/
+ul {
+  li {
+    font-size: 0.9em;
+  }
+  p {
+    font-size: 0.8em;
+    color: rgb(112, 112, 112);
+  }
+}
