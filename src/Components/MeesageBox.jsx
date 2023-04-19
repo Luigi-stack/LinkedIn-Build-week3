@@ -15,18 +15,19 @@ function MessageBox() {
             
 
                 <SplitButton
-                    className= "dropdown-menu-right position-sticky-bottom bg-white"
+                    className= "dropdown-menu-right position-sticky-bottom"
                     drop="up-down-center"
-                    variant="white"
+                    variant="dark"
                     align="start"
                     title={
                         <>
-                            <Image src="path_to_image" roundedCircle />
+                            <Image src="path_to_image" roundedCircle className='me-2' />
                             Messaggistica
                             
-                            <Icon2.HiEllipsisHorizontal className="me-2 ms-auto" />
-                            <Button className="bg-white border-0 ms-auto">
-                                <Icon.BsPencil className="me-2 bg-white text-secondary" />
+                            <Button className="bg-dark border-0 ms-auto"><Icon2.HiEllipsisHorizontal className="me-2 ms-auto" /></Button>
+                            
+                            <Button className="bg-dark border-0 ms-auto">
+                                <Icon.BsPencil className="me-2 text-secondary" />
                             </Button>
                             
                             
@@ -35,14 +36,14 @@ function MessageBox() {
                     }
                 >
 
-                    <Dropdown.Item eventKey="1"><FormControl type="text" placeholder="Cerca messaggi" className="mr-sm-2" /></Dropdown.Item>
+                    <Dropdown.Item eventKey="1" className='text-white'><FormControl type="text" placeholder="Cerca messaggi" className="mr-sm-2 bg-secondary" /></Dropdown.Item>
                     <Dropdown.Item eventKey="2">
                         <Row className="align-items-center">
                             <Col xs={2}>
                                 <Image src="path_to_image" roundedCircle />
                             </Col>
                             <Col xs={10}>
-                                <p>Testo della card</p>
+                                <p className='m-0'>Testo della card</p>
                             </Col>
                         </Row>
                     </Dropdown.Item>
@@ -53,7 +54,7 @@ function MessageBox() {
                                 <Image src="path_to_image" roundedCircle />
                             </Col>
                             <Col xs={10}>
-                                <p>Testo della card</p>
+                                <p className='m-0'>Testo della card</p>
                             </Col>
                         </Row>
                     </Dropdown.Item>

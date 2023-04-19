@@ -32,6 +32,7 @@ function App() {
             <Route path='home' element={
               <>
                 <HomePage />
+                
               </>
             }
             />

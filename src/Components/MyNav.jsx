@@ -34,7 +34,7 @@ const MyNav = function () {
                         </div>
                         <div className='d-flex secondaryNav'>
                             <div className="iteration d-flex">
-                                <Link to='home'>
+                                <Link to='home' style={{ color: 'inherit', textDecoration: 'inherit'}}>
                                     <div className='btnIcon mx-3 p-1'>
                                         <div className="icons"><AiFillHome /><Badge bg='danger'></Badge> </div>
                                         <div>Home</div>
