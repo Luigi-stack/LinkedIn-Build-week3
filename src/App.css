@@ -1,3 +1,9 @@
+body,
+html,
+.App {
+  background-color: black !important;
+}
+
 /* Jumbotron */
 .profilePicture {
   height: 135px;
@@ -6,78 +12,115 @@
   left: 4px;
   position: relative;
   top: 5px;
-  background-color: white;
+  background-color: black;
   padding: 5px;
   margin-top: -100px;
 }
 
 .biPencil:hover {
-  background-color: rgb(216, 216, 216);
+  background-color: rgba(69, 65, 65, 0.788);
   border-radius: 50px;
   cursor: pointer;
 }
 
-.altroButton, .messaggioButton {
+.altroButton:hover {
+  background-color: lightslategray !important;
+  color: white !important;
+}
+
+.altroButton,
+.messaggioButton {
   font-weight: bold !important;
 }
+
 /* fine Jumbotron */
 
-
-.subIcon{
-  font-size: 0.7em;
-}
-.icons{
+/* INIZIO NAVBAR */
+.icons {
   font-size: 1.2em;
 }
-.iteration{
-border-right: 0.1px solid grey;
+
+.iteration {
+  border-right: 0.1px solid rgba(128, 128, 128, 0.2);
 }
-.searchBar{
+
+.searchBar {
   align-items: center;
 }
-nav{
-  border-top:0.1px solid grey ;
-  border-bottom:0.1px solid grey ;
+
+nav {
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  border-top: 0.1px solid rgba(128, 128, 128, 0.2);
+  border-bottom: 0.1px solid rgba(128, 128, 128, 0.2);
   color: grey;
-  background-color: #1D2226;
+  background-color: #1d2226;
 }
-.inputBar{
+.inputBar {
   border-radius: 8px;
   color: white;
   align-items: center;
-  background-color: #38434F;
+  background-color: #38434f;
 }
-input{
+input {
   color: white;
-  background-color: #38434F;
+  background-color: #38434f;
   border: none;
   outline: none;
 }
-.navRow{
-align-items:center ;
-justify-content: space-between
 
+.navRow {
+  align-items: center;
+  justify-content: space-between
 }
-nav .btn-primary{
-  background-color: transparent!important;
+
+nav .btn-primary {
+  background-color: transparent !important;
   padding: 0 !important;
-  border: none!important;
-  color: grey!important;
-}
-.btnIcon:hover{
-color: white!important;
-cursor: pointer;
+  border: none !important;
+  color: grey !important;
 }
 
-.position-sticky-bottom {
-  bottom:0;
-  right:0;
-  position:fixed !important;
+.subDrop:hover {
+  color: white !important;
 }
+
+.btnIcon:hover {
+  color: white !important;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+}
+.btnIcon {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FINE NAVBAR*/
+
+/* messagrBox */
+.position-sticky-bottom {
+  bottom: 0;
+  right: 0;
+  position: fixed !important;
+}
+
+.dropdown-item,
+.dropdown-menu {
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+::placeholder {
+  color: white !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -85,7 +128,7 @@ cursor: pointer;
 
 .dropdown-menu-right.position-sticky-bottom {
   background-color: white !important;
-  }
+}
 /*Footer bottom*/
 
 .collegamenti {
@@ -120,3 +163,67 @@ textarea {
   margin: 0 auto;
 }
 
+/*BODY NEWS*/
+.newsCard {
+  color: white;
+}
+.descriptionText {
+  color: rgb(148, 148, 148);
+  font-size: 0.7em;
+}
+.descriptionText div:nth-child(1) {
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+}
+.contentNews {
+  font-size: 0.9em;
+}
+.commentIcon{
+  border-radius: 10px;
+}
+.imgNews img{
+  max-width: 100%;
+}
+.commentIcon:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+}
+.controlIcon div:nth-child(1){
+  color: rgb(108, 167, 255);
+}
+.controlIcon div:nth-child(1):hover{
+  cursor: pointer;
+}
+.threeIcon{
+  border-radius: 50%;
+  font-size: 1em;
+}
+.threeIcon:hover{
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.initialNews img{
+width: 50px;
+}
+/* homepage left part */
+.profilePictureHome {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: relative;
+  background-color: black;
+  padding: 2.5px;
+  margin-top: -25px;
+}
+
+.hoverElement:hover {
+  background-color: #84848233;
+  cursor: pointer;
+}
+
+.textSmall {
+  font-size: 12px;
+}
+
+/* fine homepage left part */

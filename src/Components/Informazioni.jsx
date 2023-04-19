@@ -17,16 +17,16 @@ const Informazioni = () => {
     dispatch(getUserMe(key))
     }, []);
     return (
-        <Card className="mt-3">
+        <Card className="text-white bg-dark border-0 mt-3">
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
-                Informazioni<BiPencil className='biPencil p-2 fs-1 text-secondary' />
+                Informazioni<BiPencil className='biPencil p-2 fs-1' />
             </Card.Body>
             <Card.Body>
                 👋 {user.bio} 💻
             </Card.Body>
             <Card.Body>
-                <Card body>
-                    <BsStars className="fs-4 text-secondary me-1" />
+                <Card body className="text-white bg-dark border-secondary">
+                    <BsStars className="fs-4 me-1" />
                     <span className="fw-bold">Competenze principali</span> <br /> <span className="ms-4">HTML5 • CSS • JavaScript • React.js • Sviluppo front-end</span>
                 </Card>
             </Card.Body>

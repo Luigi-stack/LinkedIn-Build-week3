@@ -26,13 +26,13 @@ const ProfileJumbotron = () => {
     return (
         <Container className='mt-2'>
             <Row>
-                <Col sm={12} lg={8} className='mb-2'>
-                    <Card style={{ width: 'auto' }}>  {/* className='text-white bg-dark' */}
+                <Col sm={12} lg={7} className='mb-2 offset-lg-1'>
+                    <Card className='text-white bg-dark border-0' style={{ width: 'auto' }}>  {/* className='text-white bg-dark' */}
                         <Card.Img variant="top" src="https://images.ctfassets.net/7thvzrs93dvf/wpImage18643/2f45c72db7876d2f40623a8b09a88b17/linkedin-default-background-cover-photo-1.png?w=790&h=196&q=90&fm=png" />
                         <Card.Body>
                             <div className='d-flex justify-content-between'>
                                 <img className='profilePicture ms-3 mb-3' src={user.image} alt='profile' />
-                                <BiPencil className='biPencil p-2 fs-1 text-secondary' />
+                                <BiPencil className='biPencil p-2 fs-1' />
                             </div>
                             
                             <div className='d-flex justify-content-between ms-1 mb-2'>
@@ -60,14 +60,14 @@ const ProfileJumbotron = () => {
                                 </div>
                             </div>
                             <Button variant="primary" size="sm" className='messaggioButton rounded-pill px-3'><RiSendPlaneFill /> Messaggio</Button>
-                            <Button variant="outline-dark" size="sm" className='altroButton rounded-pill px-3 ms-3'>Altro</Button>
+                            <Button variant="outline-light" size="sm" className='altroButton rounded-pill px-3 ms-3'>Altro</Button>
                         </Card.Body>
                     </Card>
                     <Informazioni />
                     <Esperienze />
                 </Col>
 
-                <Col sm={12} lg={4} className=''>
+                <Col sm={12} lg={3} className=''>
                     <SideBar />
                     <PersoneCheConosci />
                 </Col>

@@ -4,7 +4,7 @@ import { AiFillQuestionCircle } from "react-icons/ai"
 const SideBar = () => {
     return (
         <>
-            <Card className="fw-bold text-secondary">
+            <Card className="text-secondary bg-dark border-0 fw-bold">
                 <Card.Body className="d-flex justify-content-between">
                     <p className="m-0 mb-0">
                         Modifica il profilo pubblico e l'URL

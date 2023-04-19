@@ -8,6 +8,7 @@ import { MdWork } from 'react-icons/md';
 import { IoIosNotifications } from 'react-icons/io';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { RiTableFill } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 
 
@@ -33,51 +34,36 @@ const MyNav = function () {
                         </div>
                         <div className='d-flex secondaryNav'>
                             <div className="iteration d-flex">
-                                <div className='btnIcon mx-3 p-1'>
-                                    <div className="icons"><AiFillHome /><Badge bg='danger'></Badge> </div>
-                                    <div className='subIcon'>Home</div>
-                                </div>
+                                <Link to='home' style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                                    <div className='btnIcon mx-3 p-1'>
+                                        <div className="icons"><AiFillHome /><Badge bg='danger'></Badge> </div>
+                                        <div>Home</div>
+                                    </div>
+                                </Link>
                                 <div className='btnIcon mx-3 p-1'>
                                     <div className="icons"><BsFillPeopleFill /><Badge bg='danger'></Badge></div>
-                                    <div className='subIcon'>Rete</div>
+                                    <div>Rete</div>
                                 </div>
                                 <div className='btnIcon mx-3 p-1'>
                                     <div className="icons"><MdWork /><Badge bg='danger'></Badge></div>
-                                    <div className='subIcon'>Lavoro</div>
+                                    <div>Lavoro</div>
                                 </div>
                                 <div className='btnIcon mx-3 p-1'>
                                     <div className="icons"><AiFillMessage /><Badge bg='danger'></Badge></div>
-                                    <div className='subIcon'>Messaggistica</div>
+                                    <div>Messaggistica</div>
                                 </div>
                                 <div className='btnIcon mx-3 p-1'>
                                     <div className="icons"><IoIosNotifications /><Badge bg='danger'></Badge></div>
-                                    <div className='subIcon'>Notifica</div>
+                                    <div>Notifica</div>
                                 </div>
-                                <div className='d-flex flex-column mx-3 p-1'>
-                                    <div className='icons '><BsFillPeopleFill /><Badge bg='danger'></Badge></div>
-                                    <div>
-                                        <Dropdown>
-                                            <Dropdown.Toggle>
-                                                Tu
-                                            </Dropdown.Toggle>
-
-                                            <Dropdown.Menu>
-                                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                                            </Dropdown.Menu>
-                                        </Dropdown>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="sideBar mx-5 p-1 d-flex flex-column">
-                                <div className='icons '><RiTableFill /></div>
-                                <div>
-                                    <Dropdown>
+                                <div className='mx-3 p-1 '>
+                                    <Dropdown className='btnIcon'>
                                         <Dropdown.Toggle>
-                                            Per le aziende
+                                            <span className='subDrop'>
+                                                <div className='icons i'><BsFillPeopleFill /><Badge bg='danger'></Badge></div>
+                                                <span >Tu</span>
+                                            </span>
                                         </Dropdown.Toggle>
-
                                         <Dropdown.Menu>
                                             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
@@ -85,6 +71,22 @@ const MyNav = function () {
                                         </Dropdown.Menu>
                                     </Dropdown>
                                 </div>
+                            </div>
+                            <div className="sideBar mx-5 p-1">
+                                <Dropdown className='btnIcon'>
+                                    <Dropdown.Toggle>
+                                        <span className='subDrop'>
+                                            <div className='icons i '><RiTableFill /></div>
+                                            <span >Per le aziende</span>
+                                        </span>
+
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
                             </div>
                         </div>
 
