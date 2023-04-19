@@ -7,32 +7,40 @@ import ProfileJumbotron from './Components/ProfileJumbotron';
 import MessageBox from './Components/MeesageBox';
 import MyFooter from './Components/MyFooter';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './Components/HomePage';
 
 function App() {
   return (
     <BrowserRouter>
-    <Provider store={store}>
-    <div className="App">
-     <MyNav/>
-     <Routes>
-      
-
-<Route path='/' element= {
-  <>
-  <ProfileJumbotron/>
-  <MyFooter />
-  </>
-}
- />
+      <Provider store={store}>
+        <div className="App">
+          <MyNav />
+          <Routes>
 
 
-     </Routes>
+            <Route path='/' element={
+              <>
+                <ProfileJumbotron />
+                <MyFooter />
+              </>
+            }
+            />
 
-     <MessageBox/>
-    </div>
-    </Provider>
+            <Route path='home' element={
+              <>
+                <HomePage />
+              </>
+            }
+            />
+
+
+          </Routes>
+
+          <MessageBox />
+        </div>
+      </Provider>
     </BrowserRouter>
-)
+  )
 }
 
 export default App;
