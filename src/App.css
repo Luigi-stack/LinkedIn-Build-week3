@@ -152,6 +152,17 @@ nav .btn-primary {
   width: 100%;
   border-radius: 6px;
 }
+textarea {
+  height: 50%;
+}
+
+.post-box {
+  height: 115px;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 0 auto;
+}
+
 /*BODY NEWS*/
 .newsCard {
   color: white;

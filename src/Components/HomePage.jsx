@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap"
 import AllNews from "./AllNews"
 import HomePageLeft from "./HomePageLeft"
+import PostBox from "./PostBox"
 
 
 const HomePage = () => {
@@ -12,6 +13,7 @@ const HomePage = () => {
                 </Col>
 
                 <Col sm={12} lg={5}>
+                    <PostBox />
                     <AllNews />
                 </Col>
 
