@@ -5,7 +5,7 @@ const HomePage = () => {
     return (
         <Container>
             <Row>
-                <Col sm={12} lg={2}>
+                <Col sm={12} lg={2} className="offset-lg-1">
                     {/* qui inserisci la parte di sinistra */}
                     <h1>ciao</h1>
                 </Col>
