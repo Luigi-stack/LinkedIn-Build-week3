@@ -1,48 +1,51 @@
+import { Container } from "react-bootstrap";
 import { BsPlayBtnFill, BsCalendarDate, BsCardImage } from "react-icons/bs";
 import { MdArticle } from "react-icons/md";
 
 function PostBox() {
   return (
-    <div className="post-box container-sm border border-black">
-      <div className="row">
+    <>
+    
+    <Container>
+
+    </Container>
+    <div className="container post-box bg-dark text-white">
+      <div className="row align-items-center">
         <div className="col-1 mt-3">
-          <img src="http://placekitten.com/50/50" className="profile-image rounded-circle" alt="Profile" />
+          <img src="http://placekitten.com/200/200" style={{ width: "50px", height: "50px" }} className="profile-image rounded-circle me-3" alt="Profile" />
         </div>
-        <div className="col-11 mt-3">
+        <div className="col-9 mt-3">
           <textarea className="form-control form-control-rounded" style={{ borderRadius: "50px" }} placeholder="Scrivi qualcosa..."></textarea>
         </div>
       </div>
-      <div className="row post-box-icons d-flex justify-content-center">
-        <div className="col-3">
-          <div className="post-box-icon">
-            <BsCardImage className="text-primary" />
-            &nbsp;&nbsp;&nbsp;
+      <div className=" post-box-icons d-flex justify-content-between">
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center">
+            <BsCardImage className="text-primary me-1"/>
             <span>Photo</span>
           </div>
         </div>
-        <div className="col-3">
-          <div className="post-box-icon">
-            < BsPlayBtnFill className="text-success" />
-            &nbsp;&nbsp;&nbsp;
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center">
+            < BsPlayBtnFill className="text-success me-1" />
             <span>Video</span>
           </div>
         </div>
-        <div className="col-3">
-          <div className="post-box-icon">
-            <BsCalendarDate className="text-danger" />
-            &nbsp;&nbsp;&nbsp;
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center">
+            <BsCalendarDate className="text-danger me-1" />
             <span>Eventi</span>
           </div>
         </div>
-        <div className="col-3">
-          <div className="post-box-icon">
-            <MdArticle className="text-warning" />
-            &nbsp;&nbsp;&nbsp;
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center">
+            <MdArticle className="text-warning me-1" />
             <span>Scrivi articolo</span>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }
 
