@@ -169,7 +169,7 @@ export const delNew=(autentication,postId)=>{
         try {
 
             const res=await fetch("https://striveschool-api.herokuapp.com/api/posts/"+postId,{
-                method: 'DELETTE',
+                method: 'DELETE',
                 headers:{
                     'Authorization':"Bearer "+autentication
                 }
@@ -238,7 +238,7 @@ export const getExperienceALL=(autentication,idUser)=>{
 
         try {
 
-            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences",{
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences/",{
                 method: 'GET',
                 headers:{
                     'Authorization':"Bearer "+autentication
@@ -299,7 +299,7 @@ export const delExperience=(autentication,idUser,idExp)=>{
         try {
 
             const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+/experiences/+idExp,{
-                method: 'DELETTE',
+                method: 'DELETE',
                 headers:{
                     'Authorization':"Bearer "+autentication
                 }
