@@ -7,16 +7,20 @@ import ProfileJumbotron from './Components/ProfileJumbotron';
 import MessageBox from './Components/MeesageBox';
 import MyFooter from './Components/MyFooter';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './Components/HomePage';
+>>>>>>>>> Temporary merge branch 2
 
 function App() {
   return (
     <BrowserRouter>
-      <Provider store={store}>
-        <div className="App">
-          <MyNav />
-          <Routes>
-
+    <Provider store={store}>
+    <div className="App">
+<<<<<<<<< Temporary merge branch 1
+  
+    <Experiences />
+=========
+     <MyNav/>
+     <Routes>
+      
 
             <Route path='/' element={
               <>
@@ -36,9 +40,10 @@ function App() {
 
           </Routes>
 
-          <MessageBox />
-        </div>
-      </Provider>
+     <MessageBox/>
+>>>>>>>>> Temporary merge branch 2
+    </div>
+    </Provider>
     </BrowserRouter>
   )
 }
