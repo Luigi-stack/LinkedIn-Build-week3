@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap"
+import HomePageLeft from "./HomePageLeft"
 
 
 const HomePage = () => {
@@ -7,7 +8,7 @@ const HomePage = () => {
             <Row>
                 <Col sm={12} lg={2} className="offset-lg-1">
                     {/* qui inserisci la parte di sinistra */}
-                    <h1>ciao</h1>
+                    <HomePageLeft />
                 </Col>
 
                 <Col sm={12} lg={6}>
