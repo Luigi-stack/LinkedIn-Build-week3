@@ -8,12 +8,17 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import * as Icon from "react-icons/md"
+import * as Icon2 from "react-icons/hi"
 
 const Esperienze = () => {
 
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [toggle, setToggle] = useState(false)
+
+    
 
     const[role,setRole]=useState("");
     const[comapny,setCompany]=useState("");
@@ -43,12 +48,13 @@ const Esperienze = () => {
         dispatch(getExperienceALL(key, user)
     )}, [user]);
 
+
     return (
         <>
 
         <Card className="mt-3">
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
-                Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-secondary' onClick={handleShow} /><BiPencil className='biPencil p-2 fs-1 text-secondary' /></span>
+                Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-secondary' onClick={handleShow} /><BiPencil className='biPencil p-2 fs-1 text-secondary' onClick={()=>setToggle(!toggle)}/></span>
             </Card.Body>
             { experince?.map((el,i) => (
 
@@ -66,7 +72,24 @@ const Esperienze = () => {
                 <span className="text-secondary">inizio:{el.startDate.split("T",1)} - fine: {el.endDate.split("T",1)} </span> <br />
                 <span className="text-secondary">{el.area}</span>
                             </div>
-                            <Button size="sm" className="border border-0" variant="outline-dark" onClick={()=>{dispatch(delExperience(key,user,el._id))}}><Icon.MdDeleteForever /></Button>
+                        {toggle ? 
+                        
+                        (<>
+<Button size="sm" className="border border-0" variant="outline-primary" ><Icon2.HiPencil /></Button>
+                        </>) 
+                        : 
+                        
+                        (<>
+                         <Button size="sm" className="border border-0" variant="outline-dark" onClick={()=>{
+                            dispatch(delExperience(key,user,el._id));
+                            dispatch(getExperienceALL(key, user));
+                            }}><Icon.MdDeleteForever /></Button>
+                        </>)
+                        
+                        
+                        }
+
+                           
                         </div>
                         </Card.Body>
                         
