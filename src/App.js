@@ -6,16 +6,14 @@ import MyNav from './Components/MyNav';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ProfileJumbotron from './Components/ProfileJumbotron';
 import MessageBox from './Components/MeesageBox';
+import Experiences from './Components/Experiences.jsx'
 
 function App() {
   return (
     <Provider store={store}>
     <div className="App">
   
-     <MyNav/>
-     <ProfileJumbotron/>
-     <MessageBox/>
-      <Footer />
+    <Experiences />
     </div>
     </Provider>
 )
