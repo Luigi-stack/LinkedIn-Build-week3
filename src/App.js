@@ -8,6 +8,7 @@ import MessageBox from './Components/MeesageBox';
 import MyFooter from './Components/MyFooter';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import AllNews from './Components/AllNews';
+import HomePage from './Components/HomePage';
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
       <Provider store={store}>
         <div className="App">
           <MyNav />
-          <AllNews/>
           <Routes>
+
 
             <Route path='/' element={
               <>
@@ -25,6 +26,15 @@ function App() {
               </>
             }
             />
+
+            <Route path='home' element={
+              <>
+                <HomePage />
+              </>
+            }
+            />
+
+
           </Routes>
 
           <MessageBox />

@@ -7,6 +7,7 @@ const HomePage = () => {
             <Row>
                 <Col sm={12} lg={2}>
                     {/* qui inserisci la parte di sinistra */}
+                    <h1>ciao</h1>
                 </Col>
 
                 <Col sm={12} lg={6}>
