@@ -1,3 +1,7 @@
+body, html, .App {
+  background-color: black !important;
+}
+
 /* Jumbotron */
 .profilePicture {
   height: 135px;
@@ -6,19 +10,23 @@
   left: 4px;
   position: relative;
   top: 5px;
-  background-color: white;
+  background-color: black;
   padding: 5px;
   margin-top: -100px;
 }
 
 .biPencil:hover {
-  background-color: rgb(216, 216, 216);
+  background-color: rgba(69, 65, 65, 0.788);
   border-radius: 50px;
   cursor: pointer;
 }
 
-.altroButton,
-.messaggioButton {
+.altroButton:hover{
+  background-color: lightslategray !important;
+  color: white !important;
+}
+
+.altroButton, .messaggioButton {
   font-weight: bold !important;
 }
 /* fine Jumbotron */
@@ -163,4 +171,24 @@ nav .btn-primary {
 }
 .initialNews img{
 width: 50px;
+
+/* homepage left part */
+
+.profilePictureHome {
+  height:60px;
+  width: 60px;
+  border-radius: 50%;
+  position: relative;
+  background-color: black;
+  padding: 2.5px;
+  margin-top: -25px;
+}
+
+.hoverElement:hover{
+  background-color: #84848233;
+  cursor: pointer;
+}
+
+.textSmall {
+  font-size: 12px;
 }
