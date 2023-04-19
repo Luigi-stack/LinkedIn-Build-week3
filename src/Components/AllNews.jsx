@@ -26,7 +26,7 @@ const AllNews = () => {
                     console.log(i)
                     if (count < 50) {
                         return (
-                            <div className="newsCard m-5">
+                            <div className="newsCard mb-3 rounded-3 bg-dark">
                                 <div className='p-4'>
                                     <div className="initialNews d-flex justify-content-between" >
                                         <div className='d-flex align-items-center '>
@@ -67,7 +67,7 @@ const AllNews = () => {
                                     </div>
                                     <div className='d-flex flex-column align-items-center commentIcon p-1'>
                                         <div><BsArrowLeftRight /></div>
-                                        <div>Diffonfi il post</div>
+                                        <div>Diffondi il post</div>
                                     </div>
                                     <div className='d-flex flex-column align-items-center commentIcon p-1'>
                                         <div><FaTelegramPlane /></div>
