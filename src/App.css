@@ -22,22 +22,22 @@
 }
 /* fine Jumbotron */
 
-
-.subIcon{
-  font-size: 0.7em;
-}
+/* INIZIO NAVBAR */
 .icons{
   font-size: 1.2em;
 }
 .iteration{
-border-right: 0.1px solid grey;
+border-right: 0.1px solid rgba(128, 128, 128, 0.2);
 }
 .searchBar{
   align-items: center;
 }
 nav{
-  border-top:0.1px solid grey ;
-  border-bottom:0.1px solid grey ;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  border-top:0.1px solid rgba(128, 128, 128, 0.2) ;
+  border-bottom:0.1px solid rgba(128, 128, 128, 0.2) ;
   color: grey;
   background-color: #1D2226;
 }
@@ -64,10 +64,20 @@ nav .btn-primary{
   border: none!important;
   color: grey!important;
 }
+.subDrop:hover{
+  color: white!important;
+}
 .btnIcon:hover{
 color: white!important;
 cursor: pointer;
+border-bottom: 1px solid white;
 }
+.btnIcon{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+/* FINE NAVBAR*/
 
 .position-sticky-bottom {
   bottom:0;
@@ -83,6 +93,9 @@ cursor: pointer;
   }
 }
 
+.dropdown-menu-right.position-sticky-bottom {
+  background-color: white !important;
+  }
 /*Footer bottom*/
 
 .collegamenti {
