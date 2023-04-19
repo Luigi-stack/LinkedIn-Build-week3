@@ -1,4 +1,6 @@
-body, html, .App {
+body,
+html,
+.App {
   background-color: black !important;
 }
 
@@ -21,82 +23,107 @@ body, html, .App {
   cursor: pointer;
 }
 
-.altroButton:hover{
+.altroButton:hover {
   background-color: lightslategray !important;
   color: white !important;
 }
 
-.altroButton, .messaggioButton {
+.altroButton,
+.messaggioButton {
   font-weight: bold !important;
 }
+
 /* fine Jumbotron */
 
 /* INIZIO NAVBAR */
-.icons{
+.icons {
   font-size: 1.2em;
 }
-.iteration{
-border-right: 0.1px solid rgba(128, 128, 128, 0.2);
+
+.iteration {
+  border-right: 0.1px solid rgba(128, 128, 128, 0.2);
 }
-.searchBar{
+
+.searchBar {
   align-items: center;
 }
-nav{
+
+nav {
   z-index: 1;
   position: sticky;
   top: 0;
-  border-top:0.1px solid rgba(128, 128, 128, 0.2) ;
-  border-bottom:0.1px solid rgba(128, 128, 128, 0.2) ;
+  border-top: 0.1px solid rgba(128, 128, 128, 0.2);
+  border-bottom: 0.1px solid rgba(128, 128, 128, 0.2);
   color: grey;
   background-color: #1D2226;
 }
-.inputBar{
+
+.inputBar {
   border-radius: 8px;
   color: white;
   align-items: center;
   background-color: #38434F;
 }
-input{
+
+input {
   color: white;
   background-color: #38434F;
   border: none;
   outline: none;
 }
-.navRow{
-align-items:center ;
-justify-content: space-between
 
+.navRow {
+  align-items: center;
+  justify-content: space-between
 }
-nav .btn-primary{
-  background-color: transparent!important;
+
+nav .btn-primary {
+  background-color: transparent !important;
   padding: 0 !important;
-  border: none!important;
-  color: grey!important;
+  border: none !important;
+  color: grey !important;
 }
-.subDrop:hover{
-  color: white!important;
+
+.subDrop:hover {
+  color: white !important;
 }
-.btnIcon:hover{
-color: white!important;
-cursor: pointer;
-border-bottom: 1px solid white;
+
+.btnIcon:hover {
+  color: white !important;
+  cursor: pointer;
+  border-bottom: 1px solid white;
 }
-.btnIcon{
+
+.btnIcon {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
+
 /* FINE NAVBAR*/
 
+/* messagrBox */
 .position-sticky-bottom {
-  bottom:0;
-  right:0;
-  position:fixed !important;
+  bottom: 0;
+  right: 0;
+  position: fixed !important;
 }
+
+.dropdown-item,
+.dropdown-menu {
+  background-color: #212529 !important;
+  color: white !important;
+}
+
+::placeholder {
+  color: white !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -104,7 +131,8 @@ border-bottom: 1px solid white;
 
 .dropdown-menu-right.position-sticky-bottom {
   background-color: white !important;
-  }
+}
+
 /*Footer bottom*/
 
 .collegamenti {
@@ -130,9 +158,8 @@ border-bottom: 1px solid white;
 }
 
 /* homepage left part */
-
 .profilePictureHome {
-  height:60px;
+  height: 60px;
   width: 60px;
   border-radius: 50%;
   position: relative;
@@ -141,7 +168,7 @@ border-bottom: 1px solid white;
   margin-top: -25px;
 }
 
-.hoverElement:hover{
+.hoverElement:hover {
   background-color: #84848233;
   cursor: pointer;
 }
@@ -149,3 +176,5 @@ border-bottom: 1px solid white;
 .textSmall {
   font-size: 12px;
 }
+
+/* fine homepage left part */
