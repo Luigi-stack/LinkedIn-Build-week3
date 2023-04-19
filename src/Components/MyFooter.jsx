@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 const MyFooter = () => {
   return (
-    <Container className='bg-dark text-secondary mt-3'>
+    <Container className='bg-black text-secondary mt-5'>
       <Row>
         <Col md={9}>
           <Row>
