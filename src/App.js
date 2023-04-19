@@ -7,7 +7,6 @@ import ProfileJumbotron from './Components/ProfileJumbotron';
 import MessageBox from './Components/MeesageBox';
 import MyFooter from './Components/MyFooter';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AllNews from './Components/AllNews';
 import HomePage from './Components/HomePage';
 
 function App() {

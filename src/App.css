@@ -140,6 +140,9 @@ nav .btn-primary {
 .commentIcon{
   border-radius: 10px;
 }
+.imgNews img{
+  max-width: 100%;
+}
 .commentIcon:hover {
   background-color: rgba(128, 128, 128, 0.5);
   cursor: pointer;
@@ -157,4 +160,7 @@ nav .btn-primary {
 .threeIcon:hover{
   cursor: pointer;
   background-color: rgba(128, 128, 128, 0.5);
+}
+.initialNews img{
+width: 50px;
 }

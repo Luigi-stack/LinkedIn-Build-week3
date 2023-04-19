@@ -1,4 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap"
+import AllNews from "./AllNews"
 
 
 const HomePage = () => {
@@ -11,7 +12,7 @@ const HomePage = () => {
                 </Col>
 
                 <Col sm={12} lg={6}>
-                    {/* qui inserisci la parte centrale */}
+                    <AllNews />
                 </Col>
 
                 <Col sm={12} lg={2}>
