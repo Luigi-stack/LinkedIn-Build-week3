@@ -52,9 +52,9 @@ const Esperienze = () => {
     return (
         <>
 
-        <Card className="mt-3">
+        <Card className="mt-3 bg-dark text-white">
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
-                Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-secondary' onClick={handleShow} /><BiPencil className='biPencil p-2 fs-1 text-secondary' onClick={()=>setToggle(!toggle)}/></span>
+                Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-white' onClick={handleShow} /><BiPencil className='biPencil p-2 fs-1 text-white' onClick={()=>setToggle(!toggle)}/></span>
             </Card.Body>
             { experince?.map((el,i) => (
 
@@ -80,7 +80,7 @@ const Esperienze = () => {
                         : 
                         
                         (<>
-                         <Button size="sm" className="border border-0" variant="outline-dark" onClick={()=>{
+                         <Button size="sm" className="border border-0" variant="outline-light" onClick={()=>{
                             dispatch(delExperience(key,user,el._id));
                             dispatch(getExperienceALL(key, user));
                             }}><Icon.MdDeleteForever /></Button>

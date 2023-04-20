@@ -17,7 +17,7 @@ const PersoneCheConosci = () => {
     return (
         <>
             <Card className="text-white bg-dark border-0 fw-bold mt-3">
-                <Card.Body className="pb-0 fs-5">
+                <Card.Body className="pb-0">
                     Persone che potresti conoscere
                 </Card.Body>
                 {

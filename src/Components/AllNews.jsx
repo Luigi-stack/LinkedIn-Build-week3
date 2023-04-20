@@ -31,7 +31,7 @@ const AllNews = () => {
                                     <div className="initialNews d-flex justify-content-between" >
                                         <div className='d-flex align-items-center '>
                                             <div>
-                                                <div> <img src={news[i]?.user?.image} alt="" /></div>
+                                                <div> <img src={news[i]?.user?.image} alt="" style={{ aspectRatio: '1 / 1', borderRadius: "50%" }}/></div>
                                             </div>
                                             <div className='descriptionText mx-2'>
                                                 <div>{news[i]?.user?.username}</div>

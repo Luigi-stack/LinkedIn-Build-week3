@@ -580,3 +580,6 @@ export const addPicturePost=(autentication,postId,fileImg)=>{
     }
 
 }
+
+
+
