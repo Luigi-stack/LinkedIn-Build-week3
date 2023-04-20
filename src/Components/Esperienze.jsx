@@ -115,19 +115,18 @@ onClick={()=>{
 <Form onSubmit={(e)=>
       {
         e.preventDefault()
-        let stringStart=startDate.split("T");
-        let stringEnd=endDate.split("T");
-        console.log(stringStart)
+       
+     
          state={
             role:role,
             company:comapny,
-            startDate:stringStart[0],
-            endDate:stringEnd[0],
+            startDate:startDate,
+            endDate:endDate,
             description:description,
             area:area
         }
 
-        dispatch(setExperience(key,user,el._id,state))
+        dispatch(setExperience(key,user,el._id,JSON.stringify(state)))
 
         setRole("");
         setCompany("");
@@ -157,12 +156,12 @@ onClick={()=>{
    
       <Form.Group className="mb-3" >
         <Form.Label>Data di inizio</Form.Label>
-        <Form.Control type="date"   value={startDate} onChange={(e)=>{setStartDate(e.target.value)}}/>
+        <Form.Control type="date"   value={startDate} onChange={(e)=>{setStartDate(e.target.value)?.split("T")}}/>
       </Form.Group>
 
       <Form.Group className="mb-3" >
         <Form.Label>Data di Fine</Form.Label>
-        <Form.Control type="date"   value={endDate} onChange={(e)=>{setEndDate(e.target.value)}} />
+        <Form.Control type="date"   value={endDate} onChange={(e)=>{setEndDate(e.target.value)?.split("T")}} />
       </Form.Group>
    
       <Form.Group className="mb-3" >
