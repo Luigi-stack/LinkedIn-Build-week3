@@ -1,9 +1,9 @@
 import { Card } from "react-bootstrap"
 import { BiPencil } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addExperience, delExperience, getExperience, getExperienceALL, setExperience } from "../Redux/Actions/action_profile";
+import { addExperience, addPictureExperience, delExperience, getExperience, getExperienceALL, setExperience } from "../Redux/Actions/action_profile";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -52,9 +52,40 @@ const Esperienze = () => {
         dispatch(getExperienceALL(key, user)
     )}, [user]);
 
+    const inputRef = useRef(null);
+    const handleClick = () => {
+      // 👇️ open file input box on click of another element
+      inputRef.current.click();
+    };
+    const handleFileChange = event => {
+      const fileObj = event.target.files && event.target.files[0];
+      if (!fileObj) {
+        return;
+      }
+      console.log('fileObj is', fileObj);
+      // 👇️ reset file input
+      event.target.value = null;
+      // 👇️ is now empty
+      console.log(event.target.files);
+      // 👇️ can still access file object here
+      console.log(fileObj);
+      console.log(fileObj.name);
+    };
+
+    let [image,setImage]=useState()
+    let [id,setId]=useState();
+
+    useEffect(()=>{dispatch(addPictureExperience(key,user,id,image))
+      console.log(image)
+    
+    },[image])
 
     return (
         <>
+
+            
+                
+
 
         <Card className="mt-3 bg-dark text-white">
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
@@ -74,10 +105,23 @@ const Esperienze = () => {
                 
                 <>
                
+               <input
+                style={{ display: 'none' }}
+                ref={inputRef}
+                type="file"
+                onChange={(e) => { 
+                  setImage(e.target.files[0])
+                  setId(el._id)
+                  }}  />
+
+
                 <Card.Body>
                 <div className="d-flex">
                 <div className="flex-shrink-0">
-                <img src="https://media.licdn.com/dms/image/C4E0BAQHYgix-Ynux1A/company-logo_100_100/0/1646830188434?e=1689811200&v=beta&t=oArOJOYE7ZD473jCAUzajl3JIXLkxiTvDx61tGEjeAk" alt="" style={{ width: '60px', height: '60px' }} />
+                <img src={el.image}  alt="" style={{ width: '60px', height: '60px' }} />
+               
+                <BiPencil className='biPencil p-2 fs-1' onClick={()=>handleClick()} />
+           
                 </div>
                 <div className="flex-grow-1 ms-3">
                 <span className="fw-bold">{el.role}</span> <br />

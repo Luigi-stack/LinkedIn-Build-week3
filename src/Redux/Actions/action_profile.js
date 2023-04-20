@@ -493,7 +493,7 @@ export const modUserMe=(autentication,bodyCode)=>{
                 method: 'PUT',
                 body:bodyCode,
                 headers:{
-                    'Content-Type': 'application/json',
+              
                     'Authorization':"Bearer "+autentication
                 }
             })
@@ -517,8 +517,8 @@ export const modUserMe=(autentication,bodyCode)=>{
 }
 export const addPictureProfile=(autentication,userId,fileImg)=>{
     const image=new FormData();
-    image.delete("post")
-    image.append("post",fileImg)
+    image.delete("profile")
+    image.append("profile",fileImg)
 
     return async (dispatch,getState)=>{
 
@@ -528,7 +528,7 @@ export const addPictureProfile=(autentication,userId,fileImg)=>{
                 method: 'POST',
                 body:image,
                 headers:{
-                    'Content-Type': 'multipart/form-data',
+                
                     'Authorization':"Bearer "+autentication
                 }
             })
@@ -552,8 +552,8 @@ export const addPictureProfile=(autentication,userId,fileImg)=>{
 }
 export const addPictureExperience=(autentication,userId,expId,fileImg)=>{
     const image=new FormData();
-    image.delete("post")
-    image.append("post",fileImg)
+    image.delete("experience")
+    image.append("experience",fileImg)
 
 
     return async (dispatch,getState)=>{
@@ -564,7 +564,7 @@ export const addPictureExperience=(autentication,userId,expId,fileImg)=>{
                 method: 'POST',
                 body:image,
                 headers:{
-                    'Content-Type': 'multipart/form-data',
+                    
                     'Authorization':"Bearer "+autentication
                 }
             })
@@ -600,7 +600,7 @@ export const addPicturePost=(autentication,postId,fileImg)=>{
                 method: 'POST',
                 body:image,
                 headers:{
-                    'Content-Type': 'multipart/form-data',
+                   
                     'Authorization':"Bearer "+autentication
                 }
             })
