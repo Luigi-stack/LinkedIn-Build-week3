@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap"
 import { BiPencil } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addExperience, delExperience, getExperience, getExperienceALL, setExperience } from "../Redux/Actions/action_profile";
 import Button from 'react-bootstrap/Button';
@@ -51,6 +51,28 @@ const Esperienze = () => {
     useEffect(() => {
         dispatch(getExperienceALL(key, user)
     )}, [user]);
+
+    const inputRef = useRef(null);
+    const handleClick = () => {
+      // 👇️ open file input box on click of another element
+      inputRef.current.click();
+    };
+    const handleFileChange = event => {
+      const fileObj = event.target.files && event.target.files[0];
+      if (!fileObj) {
+        return;
+      }
+      console.log('fileObj is', fileObj);
+      // 👇️ reset file input
+      event.target.value = null;
+      // 👇️ is now empty
+      console.log(event.target.files);
+      // 👇️ can still access file object here
+      console.log(fileObj);
+      console.log(fileObj.name);
+    };
+
+    const [image,setImage]=useState()
 
 
     return (
