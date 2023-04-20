@@ -1,10 +1,26 @@
 
-import { BsPlayBtnFill, BsCalendarDate, BsCardImage,BsThreeDots } from "react-icons/bs";
+import { BsPlayBtnFill, BsCalendarDate, BsCardImage, BsThreeDots } from "react-icons/bs";
 import { MdArticle } from "react-icons/md";
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { useDispatch, useSelector } from "react-redux";
+import { addNews, addPicturePost } from "../Redux/Actions/action_profile";
+
 
 function PostBox() {
+  const inputRef = useRef(null);
+  const handleClick = () => {
+    inputRef.current.click();
+  };
+
+  const AUTH = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q'
+  const dispatch = useDispatch()
+  const postId = useSelector((state) => state.user.idpost)
+  const [textValue, setTextValue] = useState('')
+  const [photoValue, setPhotoValue] = useState()
+  let state = {
+    text: textValue,
+  }
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -33,28 +49,47 @@ function PostBox() {
               </Modal.Header>
               <Modal.Body className='modalBody'>
                 <div>
-                  <textarea className='textArea' placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
+                  <textarea className='textArea' value={textValue} onChange={(e) => { setTextValue(e.target.value) }} placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
+                </div>
+                <div className='d-flex w-100'>
+                  <div onClick={() => {
+                    handleClick()
+                    dispatch(addNews(AUTH))
+                  }
+                  }
+
+                    className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-primary contModalIcon'>
+                    <input
+                      style={{ display: 'none' }}
+                      ref={inputRef}
+                      type="file"
+                      onChange={(e) => {
+                        setPhotoValue(e.target.files[0])
+                      }}
+                    />
+                    <div className='modalIcon text-primary'><BsCardImage /></div>
+                    <div>Foto</div>
+                  </div>
+                  <div className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-success contModalIcon'>
+                    <div className='modalIcon text-success'><BsPlayBtnFill /></div>
+                    <div>Video</div>
+                  </div>
+                  <div className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-danger contModalIcon'>
+                    <div className='modalIcon text-danger'><BsCalendarDate /></div>
+                    <div>Evento</div>
+                  </div>
+                  <div className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-warning contModalIcon'>
+                    <div className='modalIcon text-warning'><BsThreeDots /></div>
+                    <div>Altro</div>
+                  </div>
+
                 </div>
               </Modal.Body>
               <Modal.Footer className='modalFooter'>
-                <div className='d-flex w-100'>
-                  <div className=' d-flex rounded-3 mx-3 flex-column align-items-center p-3 bg-primary contModalIcon'>
-                    <div className='modalIcon text-primary'><BsCardImage/></div>
-                    <div>Foto</div>
-                  </div>
-                  <div className=' d-flex rounded-3 mx-3 flex-column align-items-center p-3 bg-success contModalIcon'>
-                    <div className='modalIcon text-success'><BsPlayBtnFill/></div>
-                    <div>Video</div>
-                  </div>
-                  <div className=' d-flex rounded-3 mx-3 flex-column align-items-center p-3 bg-danger contModalIcon'>
-                    <div className='modalIcon text-danger'><BsCalendarDate/></div>
-                    <div>Evento</div>
-                  </div>
-                  <div className=' d-flex rounded-3 mx-3 flex-column align-items-center p-3 bg-warning contModalIcon'>
-                    <div className='modalIcon text-warning'><BsThreeDots/></div>
-                    <div>Altro</div>
-                  </div>
-                </div>
+                <button className="rounded-3" onClick={() => {
+                  dispatch(addNews(AUTH, JSON.stringify(state)))
+                  dispatch(addPicturePost(AUTH, postId, photoValue))
+                }} >Posta</button>
               </Modal.Footer>
             </Modal>
 

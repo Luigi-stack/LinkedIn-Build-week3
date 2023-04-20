@@ -254,7 +254,6 @@ textarea:hover {
   background-color: #1d2226!important;
 }
 .modalBody{
-  
   border-bottom:1px solid rgba(128, 128, 128, 0.4) !important ;
 }
 .btn-close{
@@ -269,7 +268,17 @@ textarea:hover {
   color: white;
   cursor:initial !important;
 }
-
+.modalFooter button{
+background-color:rgb(60, 60, 60) ;
+border: none;
+width: 80px;
+height: 30px;
+color: rgb(180, 180, 180);
+}
+.modalFooter button:hover{
+  background-color: rgb(80,80,80);
+  color: white;
+}
 .textArea:hover{
   background-color:transparent !important ;
 }
@@ -277,6 +286,8 @@ textarea:hover {
   line-height: 25px;
 }
 .contModalIcon{
+  width: 80px;
+  padding: 0.5em;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -284,9 +295,8 @@ textarea:hover {
   opacity: 0.8;
 }
 .modalIcon{
-  margin: 1em;
+  padding: 0.5em;
   border-radius: 50%;
-  padding: 1em;
   background-color: white;
 }
 /* homepage left part */

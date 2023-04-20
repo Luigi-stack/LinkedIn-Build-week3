@@ -600,7 +600,7 @@ export const addPicturePost=(autentication,postId,fileImg)=>{
                 method: 'POST',
                 body:image,
                 headers:{
-                    'Content-Type': 'multipart/form-data',
+
                     'Authorization':"Bearer "+autentication
                 }
             })
