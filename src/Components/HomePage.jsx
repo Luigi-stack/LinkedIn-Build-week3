@@ -8,8 +8,8 @@ import PostBox from "./PostBox"
 const HomePage = () => {
     return (
         <Container className="mt-2">
-            <Row>
-                <Col sm={12} lg={3} className="offset-lg-1">
+            <Row className="justify-content-center">
+                <Col sm={12} lg={3}>
                     <HomePageLeft />
                 </Col>
 
@@ -18,7 +18,7 @@ const HomePage = () => {
                     <AllNews />
                 </Col>
 
-                <Col sm={12} lg={2}>
+                <Col sm={12} lg={3}>
                     <SectionRight />
                 </Col>
             </Row>

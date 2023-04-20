@@ -57,12 +57,14 @@ nav {
   color: grey;
   background-color: #1d2226;
 }
+
 .inputBar {
   border-radius: 8px;
   color: white;
   align-items: center;
   background-color: #38434f;
 }
+
 input {
   color: white;
   background-color: #38434f;
@@ -91,6 +93,7 @@ nav .btn-primary {
   cursor: pointer;
   border-bottom: 1px solid white;
 }
+
 .btnIcon {
   align-items: center;
   display: flex;
@@ -129,6 +132,7 @@ nav .btn-primary {
 .dropdown-menu-right.position-sticky-bottom {
   background-color: white !important;
 }
+
 /*Footer bottom*/
 
 .collegamenti {
@@ -155,68 +159,93 @@ nav .btn-primary {
 
 /*SectionRight*/
 
-  li {
-    font-size: 0.9em;
-  }
-  p {
-    font-size: 0.8em;
-    color: rgb(112, 112, 112);
-  }
-
-textarea {
-  height: 50%;
+li {
+  font-size: 0.9em;
 }
 
-.post-box {
-  height: 115px;
-  border-radius: 10px;
-  max-width: 40%;
-  margin: 0 auto;
+.subtitleUl {
+  font-size: 0.8em;
+  color: rgb(112, 112, 112);
+}
+
+textarea {
+  resize: none !important;
+  box-shadow: none !important;
+  outline: none;    
+  border: 1px solid #ccc !important;  
+}
+
+textarea:hover {
+  background-color: #808080 !important;
+}
+
+
+.post-box-icon {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.post-box-icon:hover {
+  background-color: #848482;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /*BODY NEWS*/
 .newsCard {
   color: white;
 }
+
 .descriptionText {
   color: rgb(148, 148, 148);
   font-size: 0.7em;
 }
+
 .descriptionText div:nth-child(1) {
   font-weight: bold;
   color: white;
   font-size: 0.9rem;
 }
+
 .contentNews {
   font-size: 0.9em;
 }
-.commentIcon{
+
+.commentIcon {
   border-radius: 10px;
 }
-.imgNews img{
-  max-width: 100%;
+
+.imgNews img {
+  width: 100%;
 }
+
 .commentIcon:hover {
   background-color: rgba(128, 128, 128, 0.5);
   cursor: pointer;
 }
-.controlIcon div:nth-child(1){
+
+.controlIcon div:nth-child(1) {
   color: rgb(108, 167, 255);
 }
-.controlIcon div:nth-child(1):hover{
+
+.controlIcon div:nth-child(1):hover {
   cursor: pointer;
 }
-.threeIcon{
+
+.threeIcon {
   border-radius: 50%;
   font-size: 1em;
 }
-.threeIcon:hover{
+
+.threeIcon:hover {
   cursor: pointer;
   background-color: rgba(128, 128, 128, 0.5);
 }
-.initialNews img{
-width: 50px;
+
+.initialNews img {
+  width: 50px;
 }
+
 /* homepage left part */
 .profilePictureHome {
   height: 60px;
@@ -235,6 +264,11 @@ width: 50px;
 
 .textSmall {
   font-size: 12px;
+}
+
+.footerHomepage {
+  font-size: 11px;
+  font-weight: bold;
 }
 
 /* fine homepage left part */
