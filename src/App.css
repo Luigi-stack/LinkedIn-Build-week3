@@ -176,7 +176,8 @@ textarea {
 }
 
 textarea:hover {
-  background-color: #808080 !important;
+  background-color: #80808050 !important;
+  cursor: pointer;
 }
 
 
@@ -245,7 +246,49 @@ textarea:hover {
 .initialNews img {
   width: 50px;
 }
+/*FINE BODY NEWS*/
 
+/*MODALE*/
+.modalHeader, .modalFooter, .modalBody{
+  border: none!important;
+  background-color: #1d2226!important;
+}
+.modalBody{
+  
+  border-bottom:1px solid rgba(128, 128, 128, 0.4) !important ;
+}
+.btn-close{
+  border-radius: 50% !important;
+}
+.btn-close:hover{
+  background-color: rgba(128, 128, 128, 0.3)!important;
+}
+.textArea{
+  background-color: transparent;
+  border: none !important;
+  color: white;
+  cursor:initial !important;
+}
+
+.textArea:hover{
+  background-color:transparent !important ;
+}
+.detailProfile{
+  line-height: 25px;
+}
+.contModalIcon{
+  opacity: 0.5;
+  cursor: pointer;
+}
+.contModalIcon:hover{
+  opacity: 0.8;
+}
+.modalIcon{
+  margin: 1em;
+  border-radius: 50%;
+  padding: 1em;
+  background-color: white;
+}
 /* homepage left part */
 .profilePictureHome {
   height: 60px;
