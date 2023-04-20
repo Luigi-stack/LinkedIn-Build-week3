@@ -7,6 +7,13 @@ export const ALL_PROFILE="ALL_PROFILE";
 export const SINLE_PROFILE="SINGLE_PROFILE";
 export const NEWS="NEWS";
 export const NEW="NEW"
+export const ID_POST="ID_POST"
+
+
+export const id_post=(id)=>({
+    type:ID_POST,
+    payload:id
+})
 
 export const add_user = (user) => ({
     type: ADD_USER,
@@ -213,6 +220,7 @@ export const addNews=(autentication,bodyCode)=>{
                 if(res.ok){
 
                 const data=await res.json()
+                    dispatch(id_post(data._id))
                     console.log(data)
                 console.log(getState())
                 }else{
@@ -328,6 +336,37 @@ export const addExperience=(autentication,idUser,bodyCode)=>{
 
             const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+/experiences/,{
                 method: 'POST',
+                body:bodyCode,
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Authorization':"Bearer "+autentication
+                }
+            })
+                if(res.ok){
+
+                console.log(res.ok)
+                }else{
+
+                    console.log("errore durante una richiesta")
+
+                }
+            
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+}
+
+export const setExperience=(autentication,idUser,expId,bodyCode)=>{
+
+    return async (dispatch,getState)=>{
+
+        try {
+
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences/"+expId,{
+                method: 'PUT',
                 body:bodyCode,
                 headers:{
                     'Content-Type': 'application/json',
@@ -478,7 +517,8 @@ export const modUserMe=(autentication,bodyCode)=>{
 }
 export const addPictureProfile=(autentication,userId,fileImg)=>{
     const image=new FormData();
-    image.append("image",fileImg)
+    image.delete("post")
+    image.append("post",fileImg)
 
     return async (dispatch,getState)=>{
 
@@ -512,7 +552,8 @@ export const addPictureProfile=(autentication,userId,fileImg)=>{
 }
 export const addPictureExperience=(autentication,userId,expId,fileImg)=>{
     const image=new FormData();
-    image.append("image",fileImg)
+    image.delete("post")
+    image.append("post",fileImg)
 
 
     return async (dispatch,getState)=>{
@@ -547,7 +588,8 @@ export const addPictureExperience=(autentication,userId,expId,fileImg)=>{
 }
 export const addPicturePost=(autentication,postId,fileImg)=>{
     const image=new FormData();
-    image.append("image",fileImg)
+    image.delete("post")
+    image.append("post",fileImg)
 
 
     return async (dispatch,getState)=>{
