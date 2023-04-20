@@ -18,8 +18,19 @@ const Esperienze = () => {
     return (
         <Card className="text-white bg-dark border-0 mt-3">
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
+
                 Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1' /><BiPencil className='biPencil p-2 fs-1' /></span>
             </Card.Body>
+
+            <form id="formElem" className="mx-3">
+                <label htmlFor="picture" className="d-block my-3">
+                    <BiPencil className='biPencil p-2 fs-1' onClick={() => document.getElementById('picture').click()} />
+                    Aggiungi foto
+                </label>
+                <input type="file" name="picture" accept="image/*" id="picture" style={{ display: 'none' }} />
+            </form>
+
+
             {/* {user?.map((ev) => (
                 <>
                     <Card.Body>
