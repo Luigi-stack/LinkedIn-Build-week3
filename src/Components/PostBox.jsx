@@ -3,7 +3,7 @@ import { BsPlayBtnFill, BsCalendarDate, BsCardImage, BsThreeDots } from "react-i
 import { MdArticle } from "react-icons/md";
 import { useRef, useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addNews, addPicturePost } from "../Redux/Actions/action_profile";
 
 
@@ -15,6 +15,7 @@ function PostBox() {
 
   const AUTH = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q'
   const dispatch = useDispatch()
+  const postId = useSelector((state) => state.user.idpost)
   const [textValue, setTextValue] = useState('')
   const [photoValue, setPhotoValue] = useState()
   let state = {
@@ -51,7 +52,13 @@ function PostBox() {
                   <textarea className='textArea' value={textValue} onChange={(e) => { setTextValue(e.target.value) }} placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
                 </div>
                 <div className='d-flex w-100'>
-                  <div onClick={handleClick} className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-primary contModalIcon'>
+                  <div onClick={() => {
+                    handleClick()
+                    dispatch(addNews(AUTH))
+                  }
+                  }
+
+                    className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-primary contModalIcon'>
                     <input
                       style={{ display: 'none' }}
                       ref={inputRef}
@@ -79,11 +86,10 @@ function PostBox() {
                 </div>
               </Modal.Body>
               <Modal.Footer className='modalFooter'>
-
                 <button className="rounded-3" onClick={() => {
                   dispatch(addNews(AUTH, JSON.stringify(state)))
-                  dispatch(addPicturePost(AUTH,))
-                  }} >Posta</button>
+                  dispatch(addPicturePost(AUTH, postId, photoValue))
+                }} >Posta</button>
               </Modal.Footer>
             </Modal>
 
