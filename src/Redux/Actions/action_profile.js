@@ -169,7 +169,7 @@ export const delNew=(autentication,postId)=>{
         try {
 
             const res=await fetch("https://striveschool-api.herokuapp.com/api/posts/"+postId,{
-                method: 'DELETTE',
+                method: 'DELETE',
                 headers:{
                     'Authorization':"Bearer "+autentication
                 }
@@ -238,7 +238,7 @@ export const getExperienceALL=(autentication,idUser)=>{
 
         try {
 
-            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences",{
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+"/experiences/",{
                 method: 'GET',
                 headers:{
                     'Authorization':"Bearer "+autentication
@@ -299,7 +299,7 @@ export const delExperience=(autentication,idUser,idExp)=>{
         try {
 
             const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+idUser+/experiences/+idExp,{
-                method: 'DELETTE',
+                method: 'DELETE',
                 headers:{
                     'Authorization':"Bearer "+autentication
                 }
@@ -476,3 +476,110 @@ export const modUserMe=(autentication,bodyCode)=>{
     }
 
 }
+export const addPictureProfile=(autentication,userId,fileImg)=>{
+    const image=new FormData();
+    image.append("image",fileImg)
+
+    return async (dispatch,getState)=>{
+
+        try {
+
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+userId+"/picture",{
+                method: 'POST',
+                body:image,
+                headers:{
+                    'Content-Type': 'multipart/form-data',
+                    'Authorization':"Bearer "+autentication
+                }
+            })
+                if(res.ok){
+
+                const data=await res.json()
+                    console.log(data)
+                console.log(getState())
+                }else{
+
+                    console.log("errore durante una richiesta")
+
+                }
+            
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+}
+export const addPictureExperience=(autentication,userId,expId,fileImg)=>{
+    const image=new FormData();
+    image.append("image",fileImg)
+
+
+    return async (dispatch,getState)=>{
+
+        try {
+
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/profile/"+userId+"/experiences/"+expId+"/picture",{
+                method: 'POST',
+                body:image,
+                headers:{
+                    'Content-Type': 'multipart/form-data',
+                    'Authorization':"Bearer "+autentication
+                }
+            })
+                if(res.ok){
+
+                const data=await res.json()
+                    console.log(data)
+                console.log(getState())
+                }else{
+
+                    console.log("errore durante una richiesta")
+
+                }
+            
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+}
+export const addPicturePost=(autentication,postId,fileImg)=>{
+    const image=new FormData();
+    image.append("image",fileImg)
+
+
+    return async (dispatch,getState)=>{
+
+        try {
+
+            const res=await fetch("https://striveschool-api.herokuapp.com/api/posts/"+postId,{
+                method: 'POST',
+                body:image,
+                headers:{
+                    'Content-Type': 'multipart/form-data',
+                    'Authorization':"Bearer "+autentication
+                }
+            })
+                if(res.ok){
+
+                const data=await res.json()
+                    console.log(data)
+                console.log(getState())
+                }else{
+
+                    console.log("errore durante una richiesta")
+
+                }
+            
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+}
+
+
+
