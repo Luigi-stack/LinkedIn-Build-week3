@@ -10,12 +10,14 @@ import { addNews, addPicturePost } from "../Redux/Actions/action_profile";
 function PostBox() {
   const inputRef = useRef(null);
   const handleClick = () => {
+    
     inputRef.current.click();
   };
 
   const AUTH = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q'
   const dispatch = useDispatch()
   const postId = useSelector((state) => state.user.idpost)
+  const login = useSelector((state) => state.user.login)
   const [textValue, setTextValue] = useState('')
   const [photoValue, setPhotoValue] = useState()
   let state = {
@@ -24,12 +26,13 @@ function PostBox() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  console.log(login)
   return (
     <>
       <div rounded className="container rounded bg-dark text-white mb-2">
         <div className="row align-items-center mb-3">
           <div className="col-1 mt-3">
-            <img src="http://placekitten.com/50" style={{ width: "50px", height: "50px" }} className="profile-image rounded-circle me-3" alt="Profile" />
+            <img src={login.image} style={{ width: "50px", height: "50px" }} className="profile-image rounded-circle me-3" alt="Profile" />
           </div>
           <div className="col ms-4 mt-3">
 
@@ -39,10 +42,10 @@ function PostBox() {
               <Modal.Header closeVariant='white' closeButton className='modalHeader'>
                 <div className='profile text-white d-flex align-items-center'>
                   <div>
-                    <div><img src="http://placekitten.com/50" className='rounded-circle' alt="" /></div>
+                    <div><img src={login.image} style={{ width: "50px", height: "50px" }} className='rounded-circle' alt="" /></div>
                   </div>
                   <div className='mx-3 detailProfile'>
-                    <div className='fs-4'><b>Flavio Ferrante</b> </div>
+                    <div className='fs-4'><b>{login.name} {login.surname}</b> </div>
                     <div>Pubblica</div>
                   </div>
                 </div>
@@ -53,17 +56,18 @@ function PostBox() {
                 </div>
                 <div className='d-flex w-100'>
                   <div onClick={() => {
+                    dispatch(addNews(AUTH,JSON.stringify(state)))
                     handleClick()
-                    dispatch(addNews(AUTH))
                   }
                   }
-
                     className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-primary contModalIcon'>
                     <input
+
                       style={{ display: 'none' }}
                       ref={inputRef}
                       type="file"
                       onChange={(e) => {
+                        
                         setPhotoValue(e.target.files[0])
                       }}
                     />
