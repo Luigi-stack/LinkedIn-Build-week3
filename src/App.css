@@ -272,3 +272,8 @@ textarea:hover {
 }
 
 /* fine homepage left part */
+
+.modal-content {
+  background-color: #212529 !important;
+  color: white !important;
+}
