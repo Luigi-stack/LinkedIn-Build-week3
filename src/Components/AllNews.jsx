@@ -22,10 +22,10 @@ const AllNews = () => {
             {
                 news?.map((i) => {
                     count++
-                    console.log(news)
+            
                     i = Math.floor(Math.random() * news.length)
                     if (count < 2) {
-                        console.log(news.length)
+                       
                         return (
                             <div className="newsCard mb-3 rounded-3 bg-dark">
                                 <div className='p-4'>
