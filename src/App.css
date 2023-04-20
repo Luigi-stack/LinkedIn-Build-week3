@@ -216,7 +216,7 @@ textarea:hover {
 }
 
 .imgNews img {
-  max-width: 100%;
+  width: 100%;
 }
 
 .commentIcon:hover {
