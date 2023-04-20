@@ -82,6 +82,15 @@ const Esperienze = () => {
 
     return (
         <>
+        <label htmlFor="picture" className="d-block my-3" onClick={()=>handleClick()}>
+                <BiPencil className='biPencil p-2 fs-1' />
+                Aggiungi foto
+            </label>
+            <input
+                style={{ display: 'none' }}
+                ref={inputRef}
+                type="file"
+                onChange={(e) => { setImage(e.target.value) }} value={image} />
 
             
                 
