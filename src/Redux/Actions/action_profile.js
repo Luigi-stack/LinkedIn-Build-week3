@@ -588,7 +588,7 @@ export const addPictureExperience=(autentication,userId,expId,fileImg)=>{
 }
 export const addPicturePost=(autentication,postId,fileImg)=>{
     const image=new FormData();
-    image.delete("post")
+
     image.append("post",fileImg)
 
 

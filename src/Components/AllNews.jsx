@@ -22,22 +22,21 @@ const AllNews = () => {
             {
                 news?.map((i) => {
                     count++
-                    console.log(news)
                     i = Math.floor(Math.random() * news.length)
                     if (count < 2) {
-                        console.log(news.length)
+                        console.log(news)
                         return (
                             <div className="newsCard mb-3 rounded-3 bg-dark">
                                 <div className='p-4'>
                                     <div className="initialNews d-flex justify-content-between" >
                                         <div className='d-flex align-items-center '>
                                             <div>
-                                                <div> <img src={news[news.length-1]?.user?.image} alt="" style={{ aspectRatio: '1 / 1', borderRadius: "50%" }} /></div>
+                                                <div> <img src={news[news.length-2]?.user?.image} alt="" style={{ aspectRatio: '1 / 1', borderRadius: "50%" }} /></div>
                                             </div>
                                             <div className='descriptionText mx-2'>
-                                                <div>{news[news.length-1]?.user?.username}</div>
-                                                <div>{news[news.length-1]?.user?.createdAt}</div>
-                                                <div>{news[news.length-1]?.user?.area}</div>
+                                                <div>{news[news.length-2]?.user?.username}</div>
+                                                <div>{news[news.length-2]?.user?.createdAt}</div>
+                                                <div>{news[news.length-2]?.user?.area}</div>
                                             </div>
                                         </div>
 
@@ -49,12 +48,12 @@ const AllNews = () => {
 
                                     <div className="contentNews my-3">
                                         <div>
-                                            <p>{news[news.length-1]?.user?.bio}</p>
+                                            <p>{news[news.length-2]?.text}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="imgNews">
-                                    <div><img src={news[news.length-1]?.image} alt="" /></div>
+                                    <div><img src={news[news.length-2]?.image} alt="" /></div>
                                 </div>
 
                                 <div className="commentIcons d-flex justify-content-between px-4 py-2">

@@ -4,6 +4,10 @@ html,
   background-color: black !important;
 }
 
+.sticky{
+ top: 0;
+  position: sticky;
+}
 /* Jumbotron */
 .profilePicture {
   height: 135px;
