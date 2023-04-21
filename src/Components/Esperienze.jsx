@@ -82,15 +82,8 @@ const Esperienze = () => {
 
     return (
         <>
-        <label htmlFor="picture" className="d-block my-3" onClick={()=>handleClick()}>
-                <BiPencil className='biPencil p-2 fs-1' />
-                Aggiungi foto
-            </label>
-            <input
-                style={{ display: 'none' }}
-                ref={inputRef}
-                type="file"
-                onChange={(e) => { setImage(e.target.value) }} value={image} />
+        
+           
 
             
                 
@@ -120,7 +113,6 @@ const Esperienze = () => {
                 type="file"
                 onChange={(e) => { 
                   setImage(e.target.files[0])
-                  setId(el._id)
                   }}  />
 
 
@@ -129,7 +121,10 @@ const Esperienze = () => {
                 <div className="flex-shrink-0">
                 <img src={el.image}  alt="" style={{ width: '60px', height: '60px' }} />
                
-                <BiPencil className='biPencil p-2 fs-1' onClick={()=>handleClick()} />
+                <BiPencil className='biPencil p-2 fs-1' onClick={()=>{
+                  handleClick()
+                  setId(el._id)
+                  }} />
            
                 </div>
                 <div className="flex-grow-1 ms-3">
