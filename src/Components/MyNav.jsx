@@ -144,7 +144,8 @@ const MyNav = function () {
                       <Dropdown.Menu className="my-2 rounded-3 dropMenu ">
                         <div className="">
                           <div className="sectionMenu px-3 ">
-                            <div className="d-flex sectionDropProfile align-items-center">
+                            <div className="d-flex justify-content-between sectionDropProfile align-items-center">
+                            <div className="d-flex  align-items-center">
                               <div>
                                 <div>
                                   {" "}
@@ -162,19 +163,71 @@ const MyNav = function () {
                                 </p>
                                 <div>--</div>
                               </div>
-                            </div>
-
-                            <div className="sectionButton my-3 ">
-                              <div className="rounded-5">
-                                Visualizza profilo
                               </div>
+                              <DropdownButton
+                                
+                                className="rounded-5"
+                                size="sm"
+                                drop="down"
+                                variant="dark"
+                                
+                                title={`  Profilo:  `}
+                              >
+                                <Dropdown.Item eventKey="1" onClick={()=>{dispatch(change_key("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs"))
+                                    dispatch(getUserMe("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs"))
+                                    dispatch(getUserALL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs"))
+                            }}>
+                                  David Scattone
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="2"onClick={()=>{dispatch(change_key("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q"))
+                                dispatch(getUserMe("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q"))
+                                dispatch(getUserALL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q"))
+                            }}>
+                                  Flavio Ferrante
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="3" onClick={()=>{dispatch(change_key("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMWE2MzIyYTZhYjAwMTQxYTg1NmUiLCJpYXQiOjE2ODE3MjYwNTIsImV4cCI6MTY4MjkzNTY1Mn0.ibeZD2u4zbHGAs53xVbjJLJ8RMR3zSMYodjmTJgJhn0"))
+                                dispatch(getUserMe("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMWE2MzIyYTZhYjAwMTQxYTg1NmUiLCJpYXQiOjE2ODE3MjYwNTIsImV4cCI6MTY4MjkzNTY1Mn0.ibeZD2u4zbHGAs53xVbjJLJ8RMR3zSMYodjmTJgJhn0"))
+                                dispatch(getUserALL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNkMWE2MzIyYTZhYjAwMTQxYTg1NmUiLCJpYXQiOjE2ODE3MjYwNTIsImV4cCI6MTY4MjkzNTY1Mn0.ibeZD2u4zbHGAs53xVbjJLJ8RMR3zSMYodjmTJgJhn0"))
+                            }}>
+                                  Antonio Caputo
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="4" onClick={()=>{dispatch(change_key("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQyOTZlYTQ1NWZkYjAwMTQ3MzMxNjEiLCJpYXQiOjE2ODIwODU2MTAsImV4cCI6MTY4MzI5NTIxMH0.w1Mrz2_Smuk5A9Bagg1uDybPtt2AY6cRLgbynGuKlbs"))
+                                dispatch(getUserMe("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQyOTZlYTQ1NWZkYjAwMTQ3MzMxNjEiLCJpYXQiOjE2ODIwODU2MTAsImV4cCI6MTY4MzI5NTIxMH0.w1Mrz2_Smuk5A9Bagg1uDybPtt2AY6cRLgbynGuKlbs"))
+                                dispatch(getUserALL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDQyOTZlYTQ1NWZkYjAwMTQ3MzMxNjEiLCJpYXQiOjE2ODIwODU2MTAsImV4cCI6MTY4MzI5NTIxMH0.w1Mrz2_Smuk5A9Bagg1uDybPtt2AY6cRLgbynGuKlbs"))
+                            }}>
+                                  Luigi Lossa
+                                </Dropdown.Item>
+                                <Dropdown.Item eventKey="4" onClick={()=>{dispatch(change_key("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNjZjNjNzE4NmE4NzAwMTQzODY3YjEiLCJpYXQiOjE2ODIwODY4NjYsImV4cCI6MTY4MzI5NjQ2Nn0.DJOL51mep5vPMY7SoCYWfuCf5Hjcin94hNZrvCzrsyA"))
+                                dispatch(getUserMe("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNjZjNjNzE4NmE4NzAwMTQzODY3YjEiLCJpYXQiOjE2ODIwODY4NjYsImV4cCI6MTY4MzI5NjQ2Nn0.DJOL51mep5vPMY7SoCYWfuCf5Hjcin94hNZrvCzrsyA"))
+                                dispatch(getUserALL("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNjZjNjNzE4NmE4NzAwMTQzODY3YjEiLCJpYXQiOjE2ODIwODY4NjYsImV4cCI6MTY4MzI5NjQ2Nn0.DJOL51mep5vPMY7SoCYWfuCf5Hjcin94hNZrvCzrsyA"))
+                            }}>
+                                  Marco De Luca
+                                </Dropdown.Item>
+                              </DropdownButton>
                             </div>
+                            <Link
+                              to=""
+                              style={{
+                                color: "inherit",
+                                textDecoration: "inherit",
+                              }}
+                            >
+                              <div className="sectionButton my-3 ">
+                                <div className="rounded-5">
+                                  Visualizza profilo
+                                </div>
+                              </div>
+                            </Link>
                           </div>
                           <div className="sectionAccount px-3 py-1">
                             <p>Account</p>
                             <div>Impostazioni e privacy</div>
                             <div>Guida</div>
                             <div>Lingua</div>
+                            <div>
+                             
+
+                            </div>
                           </div>
 
                           <div className="sectionAttivity px-3 py-1">
@@ -245,7 +298,8 @@ const MyNav = function () {
                       <Dropdown.Menu className="my-2 rounded-3 dropMenu ">
                         <div className="">
                           <div className="sectionMenu px-3 ">
-                            <div className="d-flex sectionDropProfile align-items-center">
+                            <div className="d-flex justify-content-between sectionDropProfile align-items-center">
+                            <div className="d-flex  align-items-center">
                               <div>
                                 <div>
                                   {" "}
@@ -263,34 +317,14 @@ const MyNav = function () {
                                 </p>
                                 <div>--</div>
                               </div>
-                            </div>
-                            <Link
-                              to=""
-                              style={{
-                                color: "inherit",
-                                textDecoration: "inherit",
-                              }}
-                            >
-                              <div className="sectionButton my-3 ">
-                                <div className="rounded-5">
-                                  Visualizza profilo
-                                </div>
                               </div>
-                            </Link>
-                          </div>
-                          <div className="sectionAccount px-3 py-1">
-                            <p>Account</p>
-                            <div>Impostazioni e privacy</div>
-                            <div>Guida</div>
-                            <div>Lingua</div>
-                            <div>
-                             
                               <DropdownButton
                                 
-                              
+                                className="rounded-5"
                                 size="sm"
-                                drop="end"
-                                variant="secondary"
+                                drop="down"
+                                variant="dark"
+                                
                                 title={`  Profilo:  `}
                               >
                                 <Dropdown.Item eventKey="1" onClick={()=>{dispatch(change_key("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs"))
@@ -324,6 +358,29 @@ const MyNav = function () {
                                   Marco De Luca
                                 </Dropdown.Item>
                               </DropdownButton>
+                            </div>
+                            <Link
+                              to=""
+                              style={{
+                                color: "inherit",
+                                textDecoration: "inherit",
+                              }}
+                            >
+                              <div className="sectionButton my-3 ">
+                                <div className="rounded-5">
+                                  Visualizza profilo
+                                </div>
+                              </div>
+                            </Link>
+                          </div>
+                          <div className="sectionAccount px-3 py-1">
+                            <p>Account</p>
+                            <div>Impostazioni e privacy</div>
+                            <div>Guida</div>
+                            <div>Lingua</div>
+                            <div>
+                             
+
                             </div>
                           </div>
 
