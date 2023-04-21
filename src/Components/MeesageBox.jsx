@@ -45,7 +45,7 @@ function MessageBox() {
 
                             </Card.Title>
 
-        <Card.Footer className='myCard'>
+        <Card.Footer className='myCard' autoFocus={true}>
             
         <Card.Text>
           Some quick example text to build on the card title and make up the

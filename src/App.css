@@ -336,13 +336,13 @@ color: rgb(180, 180, 180);
 }
 
 .myCard{
+
   height: 0px;
   transition: height 1s linear;
+
 }
 
-.myButton:active .myCard{
-  background-color: red!important;
+
+.myCard:focus{
   height: 500px;
-
 }
-
