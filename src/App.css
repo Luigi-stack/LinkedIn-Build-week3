@@ -365,15 +365,7 @@ textarea:hover {
   color: white !important;
 }
 
-.myCard {
-  height: 0px;
-  transition: height 1s linear;
-}
 
-.myButton:active .myCard {
-  background-color: red !important;
-  height: 500px;
-}
 
 .ordinaPer {
   font-size: 9px;
