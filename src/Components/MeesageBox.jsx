@@ -12,83 +12,83 @@ import { useState } from 'react';
 
 function MessageBox() {
 
-    const [toogle,setToogle]= useState(false)
+    const [toogle, setToogle] = useState(false)
 
     return (
         <>
-            
 
 
 
-        {
 
-            toogle ? (
+            {
 
-
-                <Card style={{ width: '19rem' }} bg="dark"  className='position-sticky-bottom text-light'>
+                toogle ? (
 
 
-     
-        <Card.Title>    <Image src="path_to_image" roundedCircle className='me-2' />
-                            Messaggistica
-                            
+                    <Card style={{ width: '18rem' }} bg="dark" className='position-sticky-bottom text-light'>
+
+
+
+                        <Card.Title className='m-0'>
+                            <Image src="path_to_image" roundedCircle className='mx-2' />
+                            <span className='fs-6'>Messaggistica</span>
+
                             <Button className="bg-dark border-0 ms-auto"><Icon2.HiEllipsisHorizontal className="me-2 ms-auto" /></Button>
-                            
+
                             <Button className="bg-dark border-0 ms-auto">
                                 <Icon.BsPencil className="me-2 text-white" />
                             </Button>
 
-                            <Button className="bg-dark border-0 ms-auto myButton" onClick={()=>{setToogle(false)}}>
+                            <Button className="bg-dark border-0 ms-auto myButton" onClick={() => { setToogle(false) }}>
                                 <Icon.BsArrowDownCircle className="me-2 text-white" />
                             </Button>
 
 
-                            </Card.Title>
+                        </Card.Title>
 
-        <Card.Footer className='myCard'>
-            
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-      
-        </Card.Footer>
+                        <Card.Footer className='myCard'>
 
-    </Card>
+                            <Card.Text>
+                                Some quick example text to build on the card title and make up the
+                                bulk of the card's content.
+                            </Card.Text>
 
-            ) : (
+                        </Card.Footer>
 
+                    </Card>
 
-
-                <Card style={{ width: '19rem' }} bg="dark"  className='position-sticky-bottom text-light'>
+                ) : (
 
 
-     
-        <Card.Title>    <Image src="path_to_image" roundedCircle className='me-2' />
-                            Messaggistica
-                            
+
+                    <Card style={{ width: '18rem' }} bg="dark" className='position-sticky-bottom text-light'>
+
+
+
+                        <Card.Title className='m-0'>
+                            <Image src="path_to_image" roundedCircle className='mx-2' />
+                            <span className='fs-6'>Messaggistica</span>
+
                             <Button className="bg-dark border-0 ms-auto"><Icon2.HiEllipsisHorizontal className="me-2 ms-auto" /></Button>
-                            
+
                             <Button className="bg-dark border-0 ms-auto">
                                 <Icon.BsPencil className="me-2 text-white" />
                             </Button>
 
-                            <Button className="bg-dark border-0 ms-auto myButton" onClick={()=>{setToogle(true)}}>
+                            <Button className="bg-dark border-0 ms-auto myButton" onClick={() => { setToogle(true) }}>
                                 <Icon.BsArrowUpCircle className="me-2 text-white" />
                             </Button>
 
 
-                            </Card.Title>
-
-        
-
-    </Card>
-
-            )
-
-        }
+                        </Card.Title>
 
 
+
+                    </Card>
+
+                )
+
+            }
 
 
 
@@ -97,7 +97,9 @@ function MessageBox() {
 
 
 
-    {/*
+
+
+            {/*
                 <SplitButton
                     className= "dropdown-menu-right position-sticky-bottom"
                     drop="up-down-center"
