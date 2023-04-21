@@ -21,14 +21,11 @@ function ModalImg() {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user.login)
     const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs'
-    // console.log(user.image)
-    // useEffect(() => {
-    //     dispatch(getUserMe(key))
-    // }, []);
+  
 
     return (
         <>
-            <MdAddAPhoto className='biPencil p-2 fs-1' onClick={handleShow} />
+            <MdAddAPhoto className='biPencil p-2 MdAddAPhoto' onClick={handleShow} />
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeVariant='white' closeButton className='border-secondary'>

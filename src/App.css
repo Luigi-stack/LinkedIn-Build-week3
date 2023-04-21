@@ -350,3 +350,11 @@ color: rgb(180, 180, 180);
   font-size: 9px;
 }
 
+.MdAddAPhoto {
+  font-size: 32px;
+  position: relative;
+  right: 40px;
+  background-color: rgba(0, 0, 0, 0.497);
+  border-radius: 50%;
+}
+
