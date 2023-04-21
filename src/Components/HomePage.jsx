@@ -6,13 +6,14 @@ import PostBox from "./PostBox"
 import Recent from "./Recent"
 
 
+
 const HomePage = () => {
     return (
         <Container className="mt-2">
             <Row className="justify-content-center">
                 <Col className="sticky" sm={12} lg={3}>
                     <HomePageLeft />
-                    <Recent />
+                  <Recent />
                 </Col>
 
                 <Col sm={12} lg={5}>
