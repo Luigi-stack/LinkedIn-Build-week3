@@ -10,7 +10,7 @@ import { addNews, addPicturePost } from "../Redux/Actions/action_profile";
 function PostBox() {
   const inputRef = useRef(null);
   const handleClick = () => {
-    
+
     inputRef.current.click();
   };
 
@@ -38,8 +38,7 @@ function PostBox() {
 
             <textarea className="form-control form-control-rounded bg-dark text-white" style={{ borderRadius: "50px", height: "25px" }} value={'Avvia un post'} readOnly onClick={handleShow}></textarea>
 
-            <Modal size="lg" show={show} onHide={handleClose} aria-labelledby="example-modal-sizes-title-lg">
-              <form>
+            <Modal show={show} onHide={handleClose} >
               <Modal.Header closeVariant='white' closeButton className='modalHeader'>
                 <div className='profile text-white d-flex align-items-center'>
                   <div>
@@ -53,13 +52,11 @@ function PostBox() {
               </Modal.Header>
               <Modal.Body className='modalBody'>
                 <div>
-                  <textarea className='textArea' value={textValue} onChange={(e) => { setTextValue(e.target.value) }} placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
+                  <textarea className='textArea w-100' value={textValue} onChange={(e) => { setTextValue(e.target.value) }} placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
                 </div>
                 <div className='d-flex w-100'>
                   <div onClick={() => {
-                    dispatch(addNews(AUTH,JSON.stringify(state)))
                     handleClick()
-                    
                   }
                   }
                     className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-primary contModalIcon'>
@@ -69,7 +66,7 @@ function PostBox() {
                       ref={inputRef}
                       type="file"
                       onChange={(e) => {
-                        
+
                         setPhotoValue(e.target.files[0])
                       }}
                     />
@@ -93,44 +90,47 @@ function PostBox() {
               </Modal.Body>
               <Modal.Footer className='modalFooter'>
                 <button type="submit" className="rounded-3" onClick={() => {
-                  dispatch(addNews(AUTH, JSON.stringify(state),photoValue))
+                  dispatch(addNews(AUTH, JSON.stringify(state), photoValue))
+                  setTextValue('')
+                  setPhotoValue(undefined)
+                  handleClose()
                 }} >Posta</button>
               </Modal.Footer>
-              </form>
-            </Modal>
+          
+          </Modal>
 
 
+        </div>
+      </div>
+      <div className="post-box-icons d-flex justify-content-between pb-3">
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center p-1">
+            <BsCardImage className="text-primary me-1" />
+            <span>Photo</span>
           </div>
         </div>
-        <div className="post-box-icons d-flex justify-content-between pb-3">
-          <div className="">
-            <div className="post-box-icon d-flex align-items-center p-1">
-              <BsCardImage className="text-primary me-1" />
-              <span>Photo</span>
-            </div>
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center p-1">
+            < BsPlayBtnFill className="text-success me-1" />
+            <span>Video</span>
           </div>
-          <div className="">
-            <div className="post-box-icon d-flex align-items-center p-1">
-              < BsPlayBtnFill className="text-success me-1" />
-              <span>Video</span>
-            </div>
+        </div>
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center p-1">
+            <BsCalendarDate className="text-danger me-1" />
+            <span>Eventi</span>
           </div>
-          <div className="">
-            <div className="post-box-icon d-flex align-items-center p-1">
-              <BsCalendarDate className="text-danger me-1" />
-              <span>Eventi</span>
-            </div>
-          </div>
-          <div className="">
-            <div className="post-box-icon d-flex align-items-center p-1">
-              <MdArticle className="text-warning me-1" />
-              <span>Scrivi articolo</span>
-            </div>
+        </div>
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center p-1">
+            <MdArticle className="text-warning me-1" />
+            <span>Scrivi articolo</span>
           </div>
         </div>
       </div>
-      <div className="d-flex">
-      <hr class="text-secondary w-50" /><span className="fw-bold fs-6">Ordina per: <span className="text-white">Principali ▼</span></span>
+    </div >
+      <div className="d-flex align-items-center justify-content-around">
+        <hr class="border-secondary w-75 px-5" /><span className="ordinaPer">Ordina per: <span className="text-white">Principali ▼</span></span>
       </div>
     </>
   );
