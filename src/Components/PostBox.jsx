@@ -128,8 +128,8 @@ function PostBox() {
           </div>
         </div>
       </div>
-      <div className="d-flex">
-      <hr class="text-secondary w-50" /><span className="fw-bold fs-6">Ordina per: <span className="text-white">Principali ▼</span></span>
+      <div className="d-flex align-items-center justify-content-around">
+      <hr class="border-secondary w-75 px-5"/><span className="ordinaPer">Ordina per: <span className="text-white">Principali ▼</span></span>
       </div>
     </>
   );
