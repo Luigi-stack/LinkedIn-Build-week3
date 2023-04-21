@@ -8,7 +8,14 @@ export const SINLE_PROFILE = "SINGLE_PROFILE";
 export const NEWS = "NEWS";
 export const NEW = "NEW"
 export const ID_POST = "ID_POST"
+export const KEY="KEY"
 
+export const change_key=(key)=>({
+
+    type:KEY,
+    payload:key
+
+})
 
 export const id_post = (id) => ({
     type: ID_POST,
@@ -625,6 +632,17 @@ export const addPicturePost = (autentication, postId, fileImg) => {
     }
 
 }
+
+export const ChangeKey = (key) => {
+    return  (dispatch, getState) => {
+
+        dispatch(change_key(key))
+        dispatch(getUserMe(key))
+
+
+    }
+    }
+
 
 
 

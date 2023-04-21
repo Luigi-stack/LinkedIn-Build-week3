@@ -4,13 +4,14 @@ import { BsFillPersonPlusFill } from "react-icons/bs"
 import { useDispatch, useSelector } from "react-redux"
 import { getUserALL } from "../Redux/Actions/action_profile"
 
-const AUTH = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q'
-const PersoneCheConosci = () => {
 
+//const AUTH = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q'
+const PersoneCheConosci = () => {
+    const key=useSelector((state)=>state.user.key)
     const allProfile = useSelector((state) => state.user.allprofile)
     const dispatch = useDispatch()
     useEffect(() => {
-        dispatch(getUserALL(AUTH))
+        dispatch(getUserALL(key))
     }, [])
     let count = 0
     let count2 = 0
