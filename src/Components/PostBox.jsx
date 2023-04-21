@@ -38,7 +38,7 @@ function PostBox() {
 
             <textarea className="form-control form-control-rounded bg-dark text-white" style={{ borderRadius: "50px", height: "25px" }} value={'Avvia un post'} readOnly onClick={handleShow}></textarea>
 
-            <Modal size="lg" show={show} onHide={handleClose} aria-labelledby="example-modal-sizes-title-lg">
+            <Modal show={show} onHide={handleClose} >
               <Modal.Header closeVariant='white' closeButton className='modalHeader'>
                 <div className='profile text-white d-flex align-items-center'>
                   <div>
@@ -52,7 +52,7 @@ function PostBox() {
               </Modal.Header>
               <Modal.Body className='modalBody'>
                 <div>
-                  <textarea className='textArea' value={textValue} onChange={(e) => { setTextValue(e.target.value) }} placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
+                  <textarea className='textArea w-100' value={textValue} onChange={(e) => { setTextValue(e.target.value) }} placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
                 </div>
                 <div className='d-flex w-100'>
                   <div onClick={() => {
@@ -91,6 +91,8 @@ function PostBox() {
               <Modal.Footer className='modalFooter'>
                 <button className="rounded-3" onClick={() => {
                   dispatch(addNews(AUTH, JSON.stringify(state),photoValue))
+                  setTextValue('')
+                  setPhotoValue(undefined)
                   handleClose()
                 }} >Posta</button>
               </Modal.Footer>
