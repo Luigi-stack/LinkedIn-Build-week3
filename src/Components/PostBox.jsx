@@ -54,7 +54,7 @@ function PostBox() {
                 <div className='d-flex w-100'>
                   <div onClick={() => {
                     handleClick()
-                    dispatch(addNews(AUTH))
+                    
                   }
                   }
 
@@ -87,8 +87,8 @@ function PostBox() {
               </Modal.Body>
               <Modal.Footer className='modalFooter'>
                 <button className="rounded-3" onClick={() => {
-                  dispatch(addNews(AUTH, JSON.stringify(state)))
-                  dispatch(addPicturePost(AUTH, postId, photoValue))
+                  dispatch(addNews(AUTH, JSON.stringify(state),photoValue))
+                  
                 }} >Posta</button>
               </Modal.Footer>
             </Modal>
