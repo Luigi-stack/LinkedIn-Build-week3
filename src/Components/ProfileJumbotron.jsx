@@ -14,7 +14,7 @@ import { getUserMe } from '../Redux/Actions/action_profile';
 import ModalImg from './ModalImg';
 
 const ProfileJumbotron = () => {
-    
+
 
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user.login)
@@ -32,10 +32,13 @@ const ProfileJumbotron = () => {
                         <Card.Img variant="top" src="https://images.ctfassets.net/7thvzrs93dvf/wpImage18643/2f45c72db7876d2f40623a8b09a88b17/linkedin-default-background-cover-photo-1.png?w=790&h=196&q=90&fm=png" />
                         <Card.Body>
                             <div className='d-flex justify-content-between'>
-                                <img className='profilePicture ms-3 mb-3' src={user.image} alt='profile' />
-                                <ModalImg />
+                                <div>
+                                    <img className='profilePicture ms-3 mb-3' src={user.image} alt='profile' />
+                                    <ModalImg />
+                                </div>
+                                <BiPencil className='biPencil p-2 fs-1' />
                             </div>
-                            
+
                             <div className='d-flex justify-content-between ms-1 mb-2'>
                                 <div>
                                     <Card.Title className='fw-bold fs-3 m-0'>{user.name} {user.surname}</Card.Title>
