@@ -358,3 +358,9 @@ color: rgb(180, 180, 180);
   border-radius: 50%;
 }
 
+.recenti p:hover, 
+.footerHomepage div p:hover,
+li:hover {
+  color: white !important;
+  cursor: pointer;
+}
