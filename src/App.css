@@ -360,7 +360,8 @@ color: rgb(180, 180, 180);
 
 .recenti p:hover, 
 .footerHomepage div p:hover,
-li:hover {
+li:hover,
+.card-body:hover {
   color: white !important;
   cursor: pointer;
 }
