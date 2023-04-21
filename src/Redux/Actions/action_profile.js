@@ -202,7 +202,7 @@ export const delNew=(autentication,postId)=>{
 
 
 
-export const addNews=(autentication,bodyCode)=>{
+export const addNews=(autentication,bodyCode,img)=>{
 
 
     return async (dispatch,getState)=>{
@@ -220,7 +220,7 @@ export const addNews=(autentication,bodyCode)=>{
                 if(res.ok){
 
                 const data=await res.json()
-                    dispatch(id_post(data._id))
+                    dispatch(addPicturePost(autentication,data._id,img))
                     console.log(data)
                 console.log(getState())
                 }else{
