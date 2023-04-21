@@ -10,7 +10,7 @@ import { addNews, addPicturePost } from "../Redux/Actions/action_profile";
 function PostBox() {
   const inputRef = useRef(null);
   const handleClick = () => {
-    
+
     inputRef.current.click();
   };
 
@@ -66,7 +66,7 @@ function PostBox() {
                       ref={inputRef}
                       type="file"
                       onChange={(e) => {
-                        
+
                         setPhotoValue(e.target.files[0])
                       }}
                     />
@@ -89,47 +89,48 @@ function PostBox() {
                 </div>
               </Modal.Body>
               <Modal.Footer className='modalFooter'>
-                <button className="rounded-3" onClick={() => {
-                  dispatch(addNews(AUTH, JSON.stringify(state),photoValue))
+                <button type="submit" className="rounded-3" onClick={() => {
+                  dispatch(addNews(AUTH, JSON.stringify(state), photoValue))
                   setTextValue('')
                   setPhotoValue(undefined)
                   handleClose()
                 }} >Posta</button>
               </Modal.Footer>
-            </Modal>
+          
+          </Modal>
 
 
+        </div>
+      </div>
+      <div className="post-box-icons d-flex justify-content-between pb-3">
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center p-1">
+            <BsCardImage className="text-primary me-1" />
+            <span>Photo</span>
           </div>
         </div>
-        <div className="post-box-icons d-flex justify-content-between pb-3">
-          <div className="">
-            <div className="post-box-icon d-flex align-items-center p-1">
-              <BsCardImage className="text-primary me-1" />
-              <span>Photo</span>
-            </div>
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center p-1">
+            < BsPlayBtnFill className="text-success me-1" />
+            <span>Video</span>
           </div>
-          <div className="">
-            <div className="post-box-icon d-flex align-items-center p-1">
-              < BsPlayBtnFill className="text-success me-1" />
-              <span>Video</span>
-            </div>
+        </div>
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center p-1">
+            <BsCalendarDate className="text-danger me-1" />
+            <span>Eventi</span>
           </div>
-          <div className="">
-            <div className="post-box-icon d-flex align-items-center p-1">
-              <BsCalendarDate className="text-danger me-1" />
-              <span>Eventi</span>
-            </div>
-          </div>
-          <div className="">
-            <div className="post-box-icon d-flex align-items-center p-1">
-              <MdArticle className="text-warning me-1" />
-              <span>Scrivi articolo</span>
-            </div>
+        </div>
+        <div className="">
+          <div className="post-box-icon d-flex align-items-center p-1">
+            <MdArticle className="text-warning me-1" />
+            <span>Scrivi articolo</span>
           </div>
         </div>
       </div>
+    </div >
       <div className="d-flex align-items-center justify-content-around">
-      <hr class="border-secondary w-75 px-5"/><span className="ordinaPer">Ordina per: <span className="text-white">Principali ▼</span></span>
+        <hr class="border-secondary w-75 px-5" /><span className="ordinaPer">Ordina per: <span className="text-white">Principali ▼</span></span>
       </div>
     </>
   );

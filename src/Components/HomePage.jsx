@@ -11,7 +11,7 @@ const HomePage = () => {
     return (
         <Container className="mt-2">
             <Row className="justify-content-center">
-                <Col className="sticky" sm={12} lg={3}>
+                <Col sm={12} lg={3}>
                     <HomePageLeft />
                   <Recent />
                 </Col>
@@ -21,7 +21,7 @@ const HomePage = () => {
                     <AllNews />
                 </Col>
 
-                <Col  className="sticky" sm={12} lg={3} >    
+                <Col  sm={12} lg={3} >    
                     < SectionRight />      
                 </Col>
             </Row>
