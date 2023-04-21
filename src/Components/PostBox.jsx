@@ -127,7 +127,9 @@ function PostBox() {
           </div>
         </div>
       </div>
-      <hr className="text-secondary" />
+      <div className="d-flex">
+      <hr class="text-secondary w-50" /><span className="fw-bold fs-6">Ordina per: <span className="text-white">Principali ▼</span></span>
+      </div>
     </>
   );
 }
