@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 const MyNav = function () {
     return (
         <>
-            <nav>
+            <nav className='bg-dark'>
                 <Container>
                     <div className='d-flex navRow'>
                         <div className="searchBar d-flex">
