@@ -3,14 +3,17 @@ import AllNews from "./AllNews"
 import HomePageLeft from "./HomePageLeft"
 import PostBox from "./PostBox"
 import SectionRight from "./SectionRight"
+import Recent from "./Recent"
+
 
 
 const HomePage = () => {
     return (
         <Container className="mt-2">
             <Row className="justify-content-center">
-                <Col className="sticky" sm={12} lg={3}>
-                    <HomePageLeft />
+                <Col sm={12} lg={3}>
+                    <HomePageLeft/>
+                  <Recent/>
                 </Col>
 
                 <Col sm={12} lg={5}>
@@ -18,7 +21,7 @@ const HomePage = () => {
                     <AllNews />
                 </Col>
 
-                <Col  className="sticky" sm={12} lg={3} >    
+                <Col  sm={12} lg={3} >    
                     < SectionRight />      
                 </Col>
             </Row>

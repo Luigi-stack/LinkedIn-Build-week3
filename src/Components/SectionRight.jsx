@@ -6,7 +6,7 @@ import FooterHomePage from "./FooterHomePage";
  const SectionRight = () => {
   return (
     <>
-      <Card className="pt-3 px-3 mb-4 bg-dark text-white">
+      <Card className="stickyLeft pt-3 px-3 mb-4 bg-dark text-white">
         <div className="d-flex justify-content-between align-items-center">
           <h6 className="fw-bold mb-0">Linkedin Notizie</h6>
           <BsFillInfoSquareFill className="fs-6 color-secondary" />

@@ -4,10 +4,26 @@ html,
   background-color: black !important;
 }
 
-.sticky{
- top: 0;
-  position: sticky;
+/* .stickyRight, .stickyRight1, .stickyLeft, .footerHomepage {
+  position: sticky !important;
 }
+
+.stickyRight{
+  top: 70px;
+}
+
+.stickyRight1 {
+  top: 400px;
+}
+
+.stickyLeft {
+  top: 70px;
+}
+
+.footerHomepage {
+  top: 425px;
+} */
+
 /* Jumbotron */
 .profilePicture {
   height: 135px;
@@ -40,6 +56,7 @@ html,
 /* fine Jumbotron */
 
 /* INIZIO NAVBAR */
+
 .icons {
   font-size: 1.2em;
 }
@@ -68,7 +85,12 @@ nav {
   align-items: center;
   background-color: #38434f;
 }
-
+.inputBar2 {
+  border-radius: 8px;
+  color: white;
+  align-items: center;
+  background-color: #38434f;
+}
 input {
   color: white;
   background-color: #38434f;
@@ -78,7 +100,7 @@ input {
 
 .navRow {
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 nav .btn-primary {
@@ -177,15 +199,14 @@ li {
 textarea {
   resize: none !important;
   box-shadow: none !important;
-  outline: none;    
-  border: 1px solid #ccc !important;  
+  outline: none;
+  border: 1px solid #ccc !important;
 }
 
 textarea:hover {
   background-color: #80808050 !important;
   cursor: pointer;
 }
-
 
 .post-box-icon {
   font-size: 14px;
@@ -255,52 +276,54 @@ textarea:hover {
 /*FINE BODY NEWS*/
 
 /*MODALE*/
-.modalHeader, .modalFooter, .modalBody{
-  border: none!important;
-  background-color: #1d2226!important;
+.modalHeader,
+.modalFooter,
+.modalBody {
+  border: none !important;
+  background-color: #1d2226 !important;
 }
-.modalBody{
-  border-bottom:1px solid rgba(128, 128, 128, 0.4) !important ;
+.modalBody {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.4) !important ;
 }
-.btn-close{
+.btn-close {
   border-radius: 50% !important;
 }
-.btn-close:hover{
-  background-color: rgba(128, 128, 128, 0.3)!important;
+.btn-close:hover {
+  background-color: rgba(128, 128, 128, 0.3) !important;
 }
-.textArea{
+.textArea {
   background-color: transparent;
   border: none !important;
   color: white;
-  cursor:initial !important;
+  cursor: initial !important;
 }
-.modalFooter button{
-background-color:rgb(60, 60, 60) ;
-border: none;
-width: 80px;
-height: 30px;
-color: rgb(180, 180, 180);
+.modalFooter button {
+  background-color: rgb(60, 60, 60);
+  border: none;
+  width: 80px;
+  height: 30px;
+  color: rgb(180, 180, 180);
 }
-.modalFooter button:hover{
-  background-color: rgb(80,80,80);
+.modalFooter button:hover {
+  background-color: rgb(80, 80, 80);
   color: white;
 }
-.textArea:hover{
-  background-color:transparent !important ;
+.textArea:hover {
+  background-color: transparent !important ;
 }
-.detailProfile{
+.detailProfile {
   line-height: 25px;
 }
-.contModalIcon{
+.contModalIcon {
   width: 80px;
   padding: 0.5em;
   opacity: 0.5;
   cursor: pointer;
 }
-.contModalIcon:hover{
+.contModalIcon:hover {
   opacity: 0.8;
 }
-.modalIcon{
+.modalIcon {
   padding: 0.5em;
   border-radius: 50%;
   background-color: white;
@@ -332,19 +355,132 @@ color: rgb(180, 180, 180);
 
 /* fine homepage left part */
 
+ .myCard {
+  height: 500px;
+  
+  animation: marco 1s linear;
+}
+@keyframes marco{
+  0%{height:0px}
+  100%{height:500px}
+}
+
+.imageprofile {
+  height: 28px !important;
+  width: 28px !important;
+}
+
+.rounded-circle {
+
+  height: 45px;
+  width:45px;
+}
+
+ 
+
 .modal-content {
   background-color: #212529 !important;
   color: white !important;
 }
 
-.myCard{
-  height: 0px;
-  transition: height 1s linear;
+
+.ordinaPer {
+  font-size: 9px;
 }
 
-.myButton:active .myCard{
-  background-color: red!important;
-  height: 500px;
-
+.MdAddAPhoto {
+  font-size: 32px;
+  position: relative;
+  right: 40px;
+  background-color: rgba(0, 0, 0, 0.497);
+  border-radius: 50%;
 }
 
+.recenti p:hover, 
+.footerHomepage div p:hover,
+li:hover,
+.card-body:hover {
+  color: white !important;
+  cursor: pointer;
+}
+/*Drop menu*/
+.dropMenu {
+  width: 300px;
+  border: 1px solid rgba(128, 128, 128, 0.3) !important;
+}
+.sectionMenu img {
+  width: 50px;
+  height: 50px;
+}
+.sectionButton div {
+  text-align: center;
+  color: rgb(108, 167, 255) !important;
+  border: 1px solid rgb(108, 167, 255);
+}
+.sectionButton div:hover {
+  background-color: rgba(108, 167, 255, 0.1);
+}
+.sectionMenu,
+.sectionAccount,
+.sectionAttivity {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.3);
+}
+.dropMenu p {
+  color: white !important;
+  margin: 0;
+  font-weight: bold;
+}
+.dropMenu div {
+  color: rgb(190, 190, 190);
+}
+.toggleMenu:after{
+content: none !important;
+}
+/**/
+/*MEDIA QUERY NAV*/
+@media screen and (max-width: 1100px) {
+  .mediaNone {
+    display: none;
+  }
+  .navRow {
+    margin: 0.5em;
+  }
+}
+@media screen and (max-width: 480px) {
+.icons{
+  margin: 0;
+}
+}
+@media screen and (max-width: 800px) {
+  .menuFalse {
+    display: none;
+  }
+
+  .iteration{
+    border: none;
+   
+  }
+}
+@media screen and (min-width: 801px) {
+.iteration{
+  display: flex;
+}
+.inputBar2 {
+width: 100% !important;
+}
+.inputBar {
+width: 100% !important;
+}
+.input1 {
+  width: 100% !important;
+}
+.input2 {
+  width: 100% !important;
+}
+.searchBar{
+  width: 20% !important;
+}
+}
+.searchBar{
+  width: 100%;
+}

@@ -10,11 +10,11 @@ import { getNews } from '../Redux/Actions/action_profile';
 
 const AllNews = () => {
     const AUTH = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlOTQyYWZjYTEyOTAwMTQ0MGMwNzYiLCJpYXQiOjE2ODE4MjI3NjIsImV4cCI6MTY4MzAzMjM2Mn0.pIeTfVyp_8tEl-V0vFdySsEr69CGrMBcIWklbktK35Q'
-
+    const key=useSelector((state)=>state.user.key)
     const dispatch = useDispatch()
     const news = useSelector((state) => state.user.news)
     useEffect(() => {
-        dispatch(getNews(AUTH))
+        dispatch(getNews(key))
     }, [])
     let count = 0
     return (
@@ -31,12 +31,12 @@ const AllNews = () => {
                                     <div className="initialNews d-flex justify-content-between" >
                                         <div className='d-flex align-items-center '>
                                             <div className='me-2'>
-                                                <div> <img src={news[news.length - 2]?.user?.image} alt="" style={{ aspectRatio: '1 / 1', borderRadius: "50%" }} /></div>
+                                                <div> <img src={news[news.length - 1]?.user?.image} alt="" style={{ aspectRatio: '1 / 1', borderRadius: "50%" }} /></div>
                                             </div>
                                             <div className='descriptionText mx-2'>
-                                                <div>{news[news.length - 2]?.user?.username}</div>
-                                                <div>{news[news.length - 2]?.user?.createdAt}</div>
-                                                <div>{news[news.length - 2]?.user?.area}</div>
+                                                <div>{news[news.length - 1]?.user?.username}</div>
+                                                <div>{news[news.length - 1]?.user?.createdAt}</div>
+                                                <div>{news[news.length - 1]?.user?.area}</div>
                                             </div>
                                         </div>
 
@@ -48,12 +48,12 @@ const AllNews = () => {
 
                                     <div className="contentNews my-3">
                                         <div>
-                                            <p>{news[news.length - 2]?.text}</p>
+                                            <p>{news[news.length - 1]?.text}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="imgNews">
-                                    <div><img src={news[news.length - 2]?.image} alt="" /></div>
+                                    <div><img src={news[news.length - 1]?.image} alt="" /></div>
                                 </div>
 
                                 <hr className='text-secondary mb-0 mx-4' />
