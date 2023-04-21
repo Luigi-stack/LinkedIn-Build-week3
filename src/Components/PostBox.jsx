@@ -29,7 +29,7 @@ function PostBox() {
   console.log(login)
   return (
     <>
-      <div rounded className="container rounded bg-dark text-white mb-2">
+      <div rounded className="container rounded bg-dark text-white">
         <div className="row align-items-center mb-3">
           <div className="col-1 mt-3">
             <img src={login.image} style={{ width: "50px", height: "50px" }} className="profile-image rounded-circle me-3" alt="Profile" />
@@ -127,6 +127,9 @@ function PostBox() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="d-flex">
+      <hr class="text-secondary w-50" /><span className="fw-bold fs-6">Ordina per: <span className="text-white">Principali ▼</span></span>
       </div>
     </>
   );
