@@ -1,4 +1,4 @@
-import { ADD_PASSWORD, ADD_USER, ALL_PROFILE, EXPERIENCE, ID_POST, LOGIN, NEW, NEWS, SINLE_PROFILE } from "../Actions/action_profile"
+import { ADD_PASSWORD, ADD_USER, ALL_PROFILE, EXPERIENCE, ID_POST, KEY, LOGIN, NEW, NEWS, SINLE_PROFILE } from "../Actions/action_profile"
 
 const initialState = {
     user: {
@@ -10,7 +10,8 @@ const initialState = {
         singleprofile:{},
         news:[],
         new:{},
-        idpost:""
+        idpost:"",
+        key:""
     }
 }
 
@@ -100,6 +101,16 @@ const mainProfile = (state = initialState, action) => {
                             user:{
                                 ...state.user,
                                 idpost:action.payload
+
+                            }
+                        }
+                        case KEY:
+
+                        return{
+                            ...state,
+                            user:{
+                                ...state.user,
+                                key:action.payload
 
                             }
                         }

@@ -45,7 +45,8 @@ const Esperienze = () => {
 
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user.login._id)
-    const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs'
+    //const key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDNlNmMxYWQ3YjUwNDAwMTQyZDI2ZGQiLCJpYXQiOjE2ODE4MjQyOTAsImV4cCI6MTY4MzAzMzg5MH0.6hKmTY3hJA6GBeL-K8BBspzXouoH-txWkfPPDDFi3cs'
+    const key=useSelector((state)=>state.user.key)
     console.log(user)
     const experince=useSelector((state)=>state.user.experience)
     useEffect(() => {
@@ -62,12 +63,12 @@ const Esperienze = () => {
       if (!fileObj) {
         return;
       }
-      console.log('fileObj is', fileObj);
-      // 👇️ reset file input
+      
       event.target.value = null;
-      // 👇️ is now empty
+      
+      console.log('fileObj is', fileObj);
       console.log(event.target.files);
-      // 👇️ can still access file object here
+
       console.log(fileObj);
       console.log(fileObj.name);
     };
