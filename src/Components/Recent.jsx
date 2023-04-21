@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 const Recent = () => {
     return (
         <>
-      <Card className="pt-3 px-3 mb-4 bg-dark text-white">
+      <Card className="stickyRight1 pt-3 px-3 mb-4 bg-dark text-white">
         
           <h6 className="fw-bold mb-0">Recenti</h6>
         
