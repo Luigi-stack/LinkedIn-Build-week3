@@ -3,6 +3,8 @@ import { SectionRight } from "./SectionRight"
 import AllNews from "./AllNews"
 import HomePageLeft from "./HomePageLeft"
 import PostBox from "./PostBox"
+import Recent from "./Recent"
+
 
 
 const HomePage = () => {
@@ -11,6 +13,7 @@ const HomePage = () => {
             <Row className="justify-content-center">
                 <Col className="sticky" sm={12} lg={3}>
                     <HomePageLeft />
+                  <Recent />
                 </Col>
 
                 <Col sm={12} lg={5}>

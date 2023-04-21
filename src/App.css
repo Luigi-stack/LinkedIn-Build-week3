@@ -345,4 +345,25 @@ color: rgb(180, 180, 180);
 
 .myCard:focus{
   height: 500px;
+
+}
+
+.ordinaPer {
+  font-size: 9px;
+}
+
+.MdAddAPhoto {
+  font-size: 32px;
+  position: relative;
+  right: 40px;
+  background-color: rgba(0, 0, 0, 0.497);
+  border-radius: 50%;
+}
+
+.recenti p:hover, 
+.footerHomepage div p:hover,
+li:hover,
+.card-body:hover {
+  color: white !important;
+  cursor: pointer;
 }

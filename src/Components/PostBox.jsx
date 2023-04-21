@@ -38,7 +38,7 @@ function PostBox() {
 
             <textarea className="form-control form-control-rounded bg-dark text-white" style={{ borderRadius: "50px", height: "25px" }} value={'Avvia un post'} readOnly onClick={handleShow}></textarea>
 
-            <Modal size="lg" show={show} onHide={handleClose} aria-labelledby="example-modal-sizes-title-lg">
+            <Modal show={show} onHide={handleClose} >
               <Modal.Header closeVariant='white' closeButton className='modalHeader'>
                 <div className='profile text-white d-flex align-items-center'>
                   <div>
@@ -52,13 +52,11 @@ function PostBox() {
               </Modal.Header>
               <Modal.Body className='modalBody'>
                 <div>
-                  <textarea className='textArea' value={textValue} onChange={(e) => { setTextValue(e.target.value) }} placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
+                  <textarea className='textArea w-100' value={textValue} onChange={(e) => { setTextValue(e.target.value) }} placeholder='Di cosa vorresti parlare?' cols="48" rows='8'></textarea>
                 </div>
                 <div className='d-flex w-100'>
                   <div onClick={() => {
-                    dispatch(addNews(AUTH,JSON.stringify(state)))
                     handleClick()
-                    
                   }
                   }
                     className=' d-flex rounded-3 mx-3 flex-column align-items-center  bg-primary contModalIcon'>
@@ -93,7 +91,9 @@ function PostBox() {
               <Modal.Footer className='modalFooter'>
                 <button className="rounded-3" onClick={() => {
                   dispatch(addNews(AUTH, JSON.stringify(state),photoValue))
-                  
+                  setTextValue('')
+                  setPhotoValue(undefined)
+                  handleClose()
                 }} >Posta</button>
               </Modal.Footer>
             </Modal>
@@ -128,8 +128,8 @@ function PostBox() {
           </div>
         </div>
       </div>
-      <div className="d-flex">
-      <hr class="text-secondary w-50" /><span className="fw-bold fs-6">Ordina per: <span className="text-white">Principali ▼</span></span>
+      <div className="d-flex align-items-center justify-content-around">
+      <hr class="border-secondary w-75 px-5"/><span className="ordinaPer">Ordina per: <span className="text-white">Principali ▼</span></span>
       </div>
     </>
   );
