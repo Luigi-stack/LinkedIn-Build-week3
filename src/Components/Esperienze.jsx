@@ -1,9 +1,9 @@
 import { Card } from "react-bootstrap"
 import { BiPencil } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addExperience, delExperience, getExperience, getExperienceALL } from "../Redux/Actions/action_profile";
+import { addExperience, addPictureExperience, delExperience, getExperience, getExperienceALL, setExperience } from "../Redux/Actions/action_profile";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -15,6 +15,10 @@ const Esperienze = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const [show2, setShow2] = useState(false);
+    const handleClose2 = () => setShow2(false);
+    const handleShow2 = () => setShow2(true);
 
     const [toggle, setToggle] = useState(false)
 
@@ -48,23 +52,85 @@ const Esperienze = () => {
         dispatch(getExperienceALL(key, user)
     )}, [user]);
 
+    const inputRef = useRef(null);
+    const handleClick = () => {
+      // 👇️ open file input box on click of another element
+      inputRef.current.click();
+    };
+    const handleFileChange = event => {
+      const fileObj = event.target.files && event.target.files[0];
+      if (!fileObj) {
+        return;
+      }
+      console.log('fileObj is', fileObj);
+      // 👇️ reset file input
+      event.target.value = null;
+      // 👇️ is now empty
+      console.log(event.target.files);
+      // 👇️ can still access file object here
+      console.log(fileObj);
+      console.log(fileObj.name);
+    };
+
+    let [image,setImage]=useState()
+    let [id,setId]=useState();
+
+    useEffect(()=>{dispatch(addPictureExperience(key,user,id,image))
+      console.log(image)
+    
+    },[image])
 
     return (
         <>
+        <label htmlFor="picture" className="d-block my-3" onClick={()=>handleClick()}>
+                <BiPencil className='biPencil p-2 fs-1' />
+                Aggiungi foto
+            </label>
+            <input
+                style={{ display: 'none' }}
+                ref={inputRef}
+                type="file"
+                onChange={(e) => { setImage(e.target.value) }} value={image} />
+
+            
+                
+
 
         <Card className="mt-3 bg-dark text-white">
             <Card.Body className="fs-5 fw-bold pb-0 d-flex justify-content-between">
-                Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-white' onClick={handleShow} /><BiPencil className='biPencil p-2 fs-1 text-white' onClick={()=>setToggle(!toggle)}/></span>
+                Esperienze <span> <AiOutlinePlus className='biPencil p-2 fs-1 text-white' onClick={()=>{
+                  setRole("")
+                  setCompany("")
+                  setStartDate("")
+                  setEndDate("")
+                  setDescritpion("")
+                  setArea("")
+                   handleShow()
+                }
+                  } /><BiPencil className='biPencil p-2 fs-1 text-white' onClick={()=>setToggle(!toggle)}/></span>
             </Card.Body>
             { experince?.map((el,i) => (
 
                 
                 <>
                
+               <input
+                style={{ display: 'none' }}
+                ref={inputRef}
+                type="file"
+                onChange={(e) => { 
+                  setImage(e.target.files[0])
+                  setId(el._id)
+                  }}  />
+
+
                 <Card.Body>
                 <div className="d-flex">
                 <div className="flex-shrink-0">
-                <img src="https://media.licdn.com/dms/image/C4E0BAQHYgix-Ynux1A/company-logo_100_100/0/1646830188434?e=1689811200&v=beta&t=oArOJOYE7ZD473jCAUzajl3JIXLkxiTvDx61tGEjeAk" alt="" style={{ width: '60px', height: '60px' }} />
+                <img src={el.image}  alt="" style={{ width: '60px', height: '60px' }} />
+               
+                <BiPencil className='biPencil p-2 fs-1' onClick={()=>handleClick()} />
+           
                 </div>
                 <div className="flex-grow-1 ms-3">
                 <span className="fw-bold">{el.role}</span> <br />
@@ -75,7 +141,107 @@ const Esperienze = () => {
                         {toggle ? 
                         
                         (<>
-<Button size="sm" className="border border-0" variant="outline-primary" ><Icon2.HiPencil /></Button>
+<Button size="sm" className="border border-0" variant="outline-primary" 
+onClick={()=>{
+  setRole(el.role)
+  setCompany(el.company)
+  setStartDate(el.startDate.split("T",1))
+  setEndDate(el.endDate.split("T",1))
+  setDescritpion(el.description)
+  setArea(el.area)
+  handleShow2()
+  
+}
+} 
+
+
+><Icon2.HiPencil /></Button>
+
+
+
+<Modal show={show2} onHide={handleClose2}>
+<Modal.Header closeButton>
+  <Modal.Title>Aggiungi Esperienza</Modal.Title>
+</Modal.Header>
+<Modal.Body>
+
+<Form onSubmit={(e)=>
+      {
+        e.preventDefault()
+       
+     
+         state={
+            role:role,
+            company:comapny,
+            startDate:startDate,
+            endDate:endDate,
+            description:description,
+            area:area
+        }
+
+        dispatch(setExperience(key,user,el._id,JSON.stringify(state)))
+
+        setRole("");
+        setCompany("");
+        setStartDate("");
+        setEndDate("");
+        setDescritpion("");
+        setArea("");
+        dispatch(getExperienceALL(key, user))
+        handleClose()
+
+    }} >
+
+      
+
+        
+
+      <Form.Group className="mb-3" >
+
+     
+        <Form.Label>Ruolo</Form.Label>
+        <Form.Control type="text" placeholder="Inserisci Ruolo..." value={role} onChange={(e)=>{setRole(e.target.value)}} />
+      </Form.Group>
+      <Form.Group className="mb-3" >
+        <Form.Label>Company</Form.Label>
+        <Form.Control type="text" placeholder="Inserisci Company..."  value={comapny} onChange={(e)=>{setCompany(e.target.value)}} />
+      </Form.Group>
+   
+      <Form.Group className="mb-3" >
+        <Form.Label>Data di inizio</Form.Label>
+        <Form.Control type="date"   value={startDate} onChange={(e)=>{setStartDate(e.target.value)?.split("T")}}/>
+      </Form.Group>
+
+      <Form.Group className="mb-3" >
+        <Form.Label>Data di Fine</Form.Label>
+        <Form.Control type="date"   value={endDate} onChange={(e)=>{setEndDate(e.target.value)?.split("T")}} />
+      </Form.Group>
+   
+      <Form.Group className="mb-3" >
+        <Form.Label>Descrizione </Form.Label>
+        <Form.Control as="textarea" rows={3} placeholder="Descrizione..."   value={description} onChange={(e)=>{setDescritpion(e.target.value)}}/>
+      </Form.Group>
+
+      <Form.Group className="mb-3" >
+        <Form.Label>Area</Form.Label>
+        <Form.Control type="text" placeholder="Inserisci Area..."  value={area} onChange={(e)=>{setArea(e.target.value)}}/>
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        ADD
+  </Button>
+    </Form>
+
+
+
+</Modal.Body>
+
+</Modal>
+
+
+
+
+
+
                         </>) 
                         : 
                         
@@ -155,14 +321,12 @@ const Esperienze = () => {
 <Form onSubmit={(e)=>
       {
         e.preventDefault()
-        let stringStart=startDate.split("T");
-        let stringEnd=endDate.split("T");
-        console.log(stringStart)
+      
          state={
             role:role,
             company:comapny,
-            startDate:stringStart[0],
-            endDate:stringEnd[0],
+            startDate:startDate,
+            endDate:endDate,
             description:description,
             area:area
         }
@@ -191,12 +355,12 @@ const Esperienze = () => {
    
       <Form.Group className="mb-3" >
         <Form.Label>Data di inizio</Form.Label>
-        <Form.Control type="date"   value={startDate} onChange={(e)=>{setStartDate(e.target.value)}}/>
+        <Form.Control type="date"   value={startDate} onChange={(e)=>{setStartDate(e.target.value)?.split("T")}}/>
       </Form.Group>
 
       <Form.Group className="mb-3" >
         <Form.Label>Data di Fine</Form.Label>
-        <Form.Control type="date"   value={endDate} onChange={(e)=>{setEndDate(e.target.value)}} />
+        <Form.Control type="date"   value={endDate} onChange={(e)=>{setEndDate(e.target.value)?.split("T")}} />
       </Form.Group>
    
       <Form.Group className="mb-3" >
@@ -218,7 +382,6 @@ const Esperienze = () => {
 </Modal.Body>
 
 </Modal>
-
 
 
                     </>

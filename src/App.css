@@ -4,6 +4,10 @@ html,
   background-color: black !important;
 }
 
+.sticky{
+ top: 0;
+  position: sticky;
+}
 /* Jumbotron */
 .profilePicture {
   height: 135px;
@@ -178,7 +182,8 @@ textarea {
 }
 
 textarea:hover {
-  background-color: #808080 !important;
+  background-color: #80808050 !important;
+  cursor: pointer;
 }
 
 
@@ -247,7 +252,59 @@ textarea:hover {
 .initialNews img {
   width: 50px;
 }
+/*FINE BODY NEWS*/
 
+/*MODALE*/
+.modalHeader, .modalFooter, .modalBody{
+  border: none!important;
+  background-color: #1d2226!important;
+}
+.modalBody{
+  border-bottom:1px solid rgba(128, 128, 128, 0.4) !important ;
+}
+.btn-close{
+  border-radius: 50% !important;
+}
+.btn-close:hover{
+  background-color: rgba(128, 128, 128, 0.3)!important;
+}
+.textArea{
+  background-color: transparent;
+  border: none !important;
+  color: white;
+  cursor:initial !important;
+}
+.modalFooter button{
+background-color:rgb(60, 60, 60) ;
+border: none;
+width: 80px;
+height: 30px;
+color: rgb(180, 180, 180);
+}
+.modalFooter button:hover{
+  background-color: rgb(80,80,80);
+  color: white;
+}
+.textArea:hover{
+  background-color:transparent !important ;
+}
+.detailProfile{
+  line-height: 25px;
+}
+.contModalIcon{
+  width: 80px;
+  padding: 0.5em;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.contModalIcon:hover{
+  opacity: 0.8;
+}
+.modalIcon{
+  padding: 0.5em;
+  border-radius: 50%;
+  background-color: white;
+}
 /* homepage left part */
 .profilePictureHome {
   height: 60px;
@@ -274,3 +331,8 @@ textarea:hover {
 }
 
 /* fine homepage left part */
+
+.modal-content {
+  background-color: #212529 !important;
+  color: white !important;
+}

@@ -11,6 +11,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getUserMe } from '../Redux/Actions/action_profile';
+import ModalImg from './ModalImg';
 
 const ProfileJumbotron = () => {
     
@@ -32,7 +33,7 @@ const ProfileJumbotron = () => {
                         <Card.Body>
                             <div className='d-flex justify-content-between'>
                                 <img className='profilePicture ms-3 mb-3' src={user.image} alt='profile' />
-                                <BiPencil className='biPencil p-2 fs-1' />
+                                <ModalImg />
                             </div>
                             
                             <div className='d-flex justify-content-between ms-1 mb-2'>
