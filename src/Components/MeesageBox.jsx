@@ -32,7 +32,7 @@ function MessageBox() {
 
 
                         <Card.Title className='d-flex align-items-center'>
-                            <Image src={user.image} roundedCircle className='me-2 imageprofile' />
+                            <Image src={user.image} roundedCircle className='mx-2 mt-1 imageprofile' />
                             <span className='fs-6'>Messaggistica</span>
 
                             <Button className="bg-dark border-0 ms-auto"><Icon2.HiEllipsisHorizontal className="me-2 ms-auto" /></Button>
@@ -80,7 +80,7 @@ function MessageBox() {
 
 
                         <Card.Title className='d-flex align-items-center'>
-                            <Image src={user.image} roundedCircle className='me-2 imageprofile' />
+                            <Image src={user.image} roundedCircle className='mx-2 mt-1 imageprofile' />
                             <span className='fs-6'>Messaggistica</span>
 
                             <Button className="bg-dark border-0 ms-auto"><Icon2.HiEllipsisHorizontal className="me-2 ms-auto" /></Button>

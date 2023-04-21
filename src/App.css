@@ -348,8 +348,8 @@ textarea:hover {
 }
 
 .imageprofile {
-  height: 30px;
-  width:30px
+  height: 28px !important;
+  width: 28px !important;
 }
 
 .rounded-circle {
