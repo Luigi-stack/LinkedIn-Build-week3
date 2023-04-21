@@ -12,8 +12,8 @@ const HomePage = () => {
         <Container className="mt-2">
             <Row className="justify-content-center">
                 <Col sm={12} lg={3}>
-                    <HomePageLeft />
-                  <Recent />
+                    <HomePageLeft/>
+                  <Recent/>
                 </Col>
 
                 <Col sm={12} lg={5}>

@@ -4,10 +4,26 @@ html,
   background-color: black !important;
 }
 
-.sticky {
-  top: 0;
-  position: sticky;
+/* .stickyRight, .stickyRight1, .stickyLeft, .footerHomepage {
+  position: sticky !important;
 }
+
+.stickyRight{
+  top: 70px;
+}
+
+.stickyRight1 {
+  top: 400px;
+}
+
+.stickyLeft {
+  top: 70px;
+}
+
+.footerHomepage {
+  top: 425px;
+} */
+
 /* Jumbotron */
 .profilePicture {
   height: 135px;
@@ -348,8 +364,8 @@ textarea:hover {
 }
 
 .imageprofile {
-  height: 30px;
-  width:30px
+  height: 28px !important;
+  width: 28px !important;
 }
 
 .rounded-circle {

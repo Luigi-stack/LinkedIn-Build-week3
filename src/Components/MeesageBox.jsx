@@ -2,7 +2,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import SplitButton from 'react-bootstrap/SplitButton';
-import { ButtonGroup, FormControl, Button, Card,ListGroup } from 'react-bootstrap';
+import { ButtonGroup, FormControl, Button, Card, ListGroup } from 'react-bootstrap';
 import * as Icon from 'react-icons/bs'
 import * as Icon2 from 'react-icons/hi2'
 import * as Icon3 from 'react-icons/gr'
@@ -14,7 +14,7 @@ import { useSelector } from 'react-redux';
 function MessageBox() {
 
     const [toogle, setToogle] = useState(false)
-    const user= useSelector((state)=>state.user.login)
+    const user = useSelector((state) => state.user.login)
 
     return (
         <>
@@ -31,8 +31,9 @@ function MessageBox() {
 
 
 
-                        <Card.Title>    <Image src={user.image} roundedCircle className='me-2 imageprofile' />
-                        <span className='fs-6'>Messaggistica</span>
+                        <Card.Title className='d-flex align-items-center'>
+                            <Image src={user.image} roundedCircle className='mx-2 mt-1 imageprofile' />
+                            <span className='fs-6'>Messaggistica</span>
 
                             <Button className="bg-dark border-0 ms-auto"><Icon2.HiEllipsisHorizontal className="me-2 ms-auto" /></Button>
 
@@ -48,24 +49,24 @@ function MessageBox() {
                         </Card.Title>
 
                         <Card.Footer className='myCard'>
-  <div className="d-flex align-items-center">
-    <input type="search" className="form-control-sm w-100" placeholder="Cerca messaggi" />
-  </div>
-  <ListGroup className="mt-">
-    <ListGroup.Item className="d-flex align-items-center bg-dark border-0">
-      <img src="http://placekitten.com/200/300" alt="profilo" className="rounded-circle me-3" />
-      <div className='text-white'>Messaggio 1</div>
-    </ListGroup.Item>
-    <ListGroup.Item className="d-flex align-items-center bg-dark border-0">
-      <img src="http://placekitten.com/200/300" alt="profilo" className="rounded-circle me-3" />
-      <div className='text-white'>Messaggio 2</div>
-    </ListGroup.Item>
-    <ListGroup.Item className="d-flex align-items-center bg-dark border-0">
-      <img src="http://placekitten.com/200/300" alt="profilo" className="rounded-circle me-3"/>
-      <div className='text-white'>Messaggio 3</div>
-    </ListGroup.Item>
-  </ListGroup>
-</Card.Footer>
+                            <div className="d-flex align-items-center">
+                                <input type="search" className="form-control-sm w-100" placeholder="Cerca messaggi" />
+                            </div>
+                            <ListGroup className="mt-">
+                                <ListGroup.Item className="d-flex align-items-center bg-dark border-0">
+                                    <img src="http://placekitten.com/200/300" alt="profilo" className="rounded-circle me-3" />
+                                    <div className='text-white'>Messaggio 1</div>
+                                </ListGroup.Item>
+                                <ListGroup.Item className="d-flex align-items-center bg-dark border-0">
+                                    <img src="http://placekitten.com/200/300" alt="profilo" className="rounded-circle me-3" />
+                                    <div className='text-white'>Messaggio 2</div>
+                                </ListGroup.Item>
+                                <ListGroup.Item className="d-flex align-items-center bg-dark border-0">
+                                    <img src="http://placekitten.com/200/300" alt="profilo" className="rounded-circle me-3" />
+                                    <div className='text-white'>Messaggio 3</div>
+                                </ListGroup.Item>
+                            </ListGroup>
+                        </Card.Footer>
 
 
                     </Card>
@@ -78,7 +79,8 @@ function MessageBox() {
 
 
 
-                        <Card.Title>    <Image src={user.image} roundedCircle className='me-2 imageprofile' />
+                        <Card.Title className='d-flex align-items-center'>
+                            <Image src={user.image} roundedCircle className='mx-2 mt-1 imageprofile' />
                             <span className='fs-6'>Messaggistica</span>
 
                             <Button className="bg-dark border-0 ms-auto"><Icon2.HiEllipsisHorizontal className="me-2 ms-auto" /></Button>
